@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Molengo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Molengo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Molengo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dra. Lizzie Cárdenas - Ortodoncia y Odontología Integral</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Nunito Sans', Arial, sans-serif;
+            line-height: 1.6;
+            color: #000000;
+            background-color: #ffffff;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Layout components */
+        .main-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+        
+        /* Header styles */
+        .top-header {
+            width: 100%;
+            background-color: #253854;
+            padding: 8px 16px;
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            text-align: center;
+        }
+        
+        .header-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #ffffff;
+            font-family: 'Molengo', serif;
+            font-size: 32px;
+            line-height: 38px;
+        }
+        
+        .header-icon {
+            width: 53px;
+            height: 53px;
+        }
+        
+        /* Navigation */
+        .navigation {
+            width: 100%;
+            background-color: #27c3ea;
+            padding: 12px 16px;
+            position: sticky;
+            top: 0;
+        }
+        
+        .nav-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .logo {
+            width: 466px;
+            height: 100px;
+        }
+        
+        .nav-menu {
+            display: none;
+        }
+        
+        .nav-links {
+            display: flex; 
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .nav-link {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #253854;
+            text-decoration: none;
+            padding: 8px 16px;
+
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        
+        /* Hero section */
+        .hero-section {
+            width: 100%;
+            background-image: url('../assets/images/img_consultorio.png');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+        }
+        
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+        }
+        
+        .hero-title {
+            font-size: 32px;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #000000;
+            margin-bottom: 16px;
+            align
+        }
+        
+        .hero-subtitle {
+            font-size: 28px;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 700;
+            line-height: 1.1;
+            color: #000000;
+            margin-bottom: 24px;
+        }
+        
+        .cta-button {
+            background-color: #86d7c1;
+            color: #253854;
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            padding: 16px 24px;
+            border: none;
+            border-radius: 52px;
+            cursor: pointer;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* About section */
+        .about-section {
+            padding: 32px 16px;
+            margin-top: 16px;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-family: 'Libre Franklin', sans-serif;
+            font-weight: 700;
+            color: #253854;
+            margin-bottom: 24px;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .doctor-image {
+            width: 505px;
+            height: 338px;
+            max-width: 550px;
+            border-radius: 8px;
+            vertical-align: top;
+            /* align-self: center; */
+        }
+        
+        .about-text {
+            font-size: 27px;
+            font-family: 'Molengo', serif;
+            line-height: 1.5;
+            color: #000000;
+        }
+        
+        .ver-mas-btn {
+            background-color: #86d7c1;
+            color: #253854;
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 48px;
+            width: 380px;
+            height: 77px;
+            font-weight: 500;
+            padding: 8px 8px;
+            border: none;
+            border-radius: 38px;
+            cursor: pointer;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            align-self: flex-end;
+            margin-top: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .ver-mas-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Specialties section */
+        .specialties-section {
+            padding: 32px 16px;
+        }
+        
+        .specialties-content {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .specialty-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .specialty-text {
+            flex: 1;
+            padding-right: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .specialty-image {
+            max-width: 400px;
+            min-width: 100px;
+            border-radius: 8px;
+            align-self: center;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        }
+        
+        .specialty-item {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .specialty-text {
+            flex: 1;
+        }
+        
+        .specialty-title {
+            font-size: 24px;
+            font-family: 'Libre Franklin', sans-serif;
+            font-weight: 700;
+            color: #253854;
+            margin-bottom: 8px;
+        }
+        
+        .specialty-description {
+            font-size: 16px;
+            font-family: 'Nunito Sans', sans-serif;
+            line-height: 1.4;
+            color: #000000;
+            margin-bottom: 16px;
+        }
+        
+        .specialty-image {
+            width: 100%;
+            min-width: 100px;
+            max-width: 500px;
+            align-self: center;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        }
+        
+        /* Testimonials section */
+        .testimonials-section {
+            padding: 32px 16px;
+            margin-top: 32px;
+        }
+        
+        .testimonials-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-top: 24px;
+        }
+        
+        .testimonial-card {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 16px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            position: relative;
+        }
+        
+        .stars-image {
+            width: 300px;
+            height: auto;
+            margin-bottom: 8px;
+            align-content: center;
+            margin-left: 50px;
+        }
+        
+        .testimonial-text {
+            font-size: 14px;
+            font-family: 'Nunito Sans', sans-serif;
+            font-style: italic;
+            line-height: 1.4;
+            color: #000000;
+            margin-bottom: 8px;
+        }
+        
+        .testimonial-author {
+            font-size: 14px;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 700;
+            font-style: italic;
+            color: #000000;
+        }
+        
+        /* Contact form section */
+        .contact-section {
+            background-color: #27c3ea;
+            margin-top: 32px;
+            margin-left: auto;
+        }
+        
+        .contact-title {
+            font-size: 48px;
+            font-family: 'Libre Franklin', sans-serif;
+            font-weight: 700;
+            color: #253854;
+            margin-bottom: 16px;
+        }
+        
+        .contact-subtitle {
+            font-size: 42px;
+            font-family: 'Molengo', serif;
+            color: #253854;
+            margin-bottom: 24px;
+        }
+        
+        .form-row {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        
+        .form-input {
+            background-color: #ffffff;
+            color: #0f6a8c;
+            font-family: 'Molengo', serif;
+            font-size: 32px;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .form-input-2 {
+            background-color: #ffffff;
+            color: #0f6a8c;
+            font-family: 'Molengo', serif;
+            font-size: 32px;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            width: 100%;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .form-textarea {
+            background-color: #ffffff;
+            color: #0e698b;
+            font-family: 'Molengo', serif;
+            font-size: 32px;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: #86d7c1;
+            color: #253854;
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 30px;
+            font-weight: 700;
+            padding: 8px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            margin-left: 80%;
+            margin-top: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #253854;
+            color: #ffffff;
+            padding: 32px 16px;
+            margin-top: 32px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .footer-logo {
+            width: 534px;
+            height: 112px;
+            align-self: center;
+        }
+        
+        .footer-info {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .footer-title {
+            font-size: 33px;
+            font-family: 'Libre Franklin', sans-serif;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: -2%;
+            font-size: 32px;
+            font-family: 'Molengo', serif;
+        }
+        
+        .footer-icon {
+            width: 36px;
+            height: 36px;
+        }
+        
+        .footer-brand {
+            width: 294px;
+            height: 77px;
+            align-self: center;
+            margin-top: 16px;
+        }
+        
+        .footer-disclaimer {
+            font-size: 19px;
+            font-family: 'Molengo', sans-serif;
+            text-align: center;
+            margin-top: 16px;
+            line-height: 1.4;
+        }
+        
+        /* Responsive media queries */
+        @media (min-width: 640px) {
+            .header-content {
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .header-item {
+                font-size: 42px;
+            }
+            
+            .nav-content {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            
+            .nav-links {
+                flex-direction: row;
+                gap: 24px;
+            }
+            
+            .nav-link {
+                font-size: 20px;
+            }
+            
+            .hero-title {
+                font-size: 40px;
+            }
+            
+            .hero-subtitle {
+                font-size: 36px;
+            }
+            
+            .cta-button {
+                font-size: 28px;
+                padding: 18px 28px;
+            }
+            
+            .about-content {
+                flex-direction: row;
+                /* align-items: flex-start; */
+            }
+            
+            .doctor-image {
+                max-width: 505px;
+                vertical-align: top;
+                height: 338px;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+            
+            .about-text {
+                font-size: 27px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .specialty-item {
+                flex-direction: row;
+                align-items: center;
+            }
+            
+            .specialty-item:nth-child(even) {
+                flex-direction: row;
+            }
+            
+            .specialty-text {
+                flex: 1;
+                padding: 0 24px;
+            }
+            
+            .specialty-image {
+                max-width: 300px;
+                flex-shrink: 0;
+            }
+            
+            .testimonials-grid {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+            
+            .testimonial-card {
+                flex: 1;
+                min-width: 280px;
+            }
+            
+            .form-row {
+                flex-direction: row;
+                gap: 16px;
+            }
+            
+            .form-input {
+                flex: 1;
+                font-size: 32px;
+            }
+            .form-input-2 {
+                flex: 1;
+                font-size: 32px;
+            }
+            
+            .footer-content {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+            
+            .footer-info {
+                flex: 1;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .top-header {
+                padding: 8px 32px;
+            }
+            
+            .navigation {
+                padding: 12px 32px;
+            }
+            
+            .hero-section {
+                padding: 120px 32px;
+                min-height: 500px;
+            }
+            
+            .hero-title {
+                font-size: 50px;
+            }
+            
+            .hero-subtitle {
+                font-size: 48px;
+            }
+            
+            .cta-button {
+                font-size: 32px;
+                padding: 20px 32px;
+            }
+            
+            .about-section,
+            .specialties-section,
+            .testimonials-section,
+            .contact-section {
+                padding: 48px 32px;
+            }
+            
+            .section-title {
+                font-size: 36px;
+            }
+            
+            .specialty-title {
+                font-size: 28px;
+            }
+            
+            .specialty-description {
+                font-size: 18px;
+            }
+            
+            .testimonials-grid {
+                gap: 24px;
+            }
+            
+            .testimonial-text {
+                font-size: 16px;
+            }
+            
+            .testimonial-author {
+                font-size: 16px;
+            }
+            
+            .contact-title {
+                font-size: 42px;
+            }
+            
+            .contact-subtitle {
+                font-size: 32px;
+            }
+            
+            .footer {
+                padding: 48px 32px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .header-item {
+                font-size: 32px;
+            }
+            
+            .nav-link {
+                font-size: 24px;
+            }
+            
+            .hero-title {
+                font-size: 60px;
+            }
+            
+            .hero-subtitle {
+                font-size: 56px;
+            }
+            
+            .cta-button {
+                font-size: 36px;
+                padding: 22px 34px;
+            }
+            
+            .section-title {
+                font-size: 40px;
+            }
+            
+            .about-text {
+                font-size: 27px;
+            }
+            
+            .specialty-title {
+                font-size: 32px;
+            }
+            
+            .specialty-description {
+                font-size: 20px;
+            }
+            
+            .testimonials-grid {
+                flex-wrap: nowrap;
+            }
+            
+            .testimonial-card {
+                min-width: 320px;
+            }
+            
+            .testimonial-text {
+                font-size: 18px;
+            }
+            
+            .testimonial-author {
+                font-size: 18px;
+            }
+        }
+        
+        @media (min-width: 1280px) {
+            .hero-title {
+                font-size: 80px;
+            }
+            
+            .hero-subtitle {
+                font-size: 96px;
+            }
+            
+            .cta-button {
+                font-size: 50px;
+            }
+            
+            .section-title {
+                font-size: 50px;
+            }
+            
+            .specialty-title {
+                font-size: 40px;
+            }
+            
+            .specialty-description {
+                font-size: 32px;
+            }
+            
+            .testimonial-text {
+                font-size: 21px;
+            }
+            
+            .testimonial-author {
+                font-size: 22px;
+            }
+        }
+    </style>
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fgusherbas6370back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Header -->
+        <header class="top-header">
+            <div class="content-wrapper">
+                <div class="header-content">
+                    <div class="header-item">
+                        <img src="../assets/images/img_vector.png" alt="Phone" class="header-icon" />
+                        <span>(+591) 62547130 / (2) 2799061</span>
+                    </div>
+                    <div class="header-item">
+                        <img src="../assets/images/img_envelope_1.svg" alt="Email" class="header-icon" />
+                        <span>lizzie_cardenas@yahoo.es</span>
+                    </div>
+                    <div class="header-item">
+                        <img src="../assets/images/img_vector_white_a700.svg" alt="Location" class="header-icon" />
+                        <span>Calacoto calle 21 #8226 piso 2 oficina 7</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Navigation -->
+        <nav class="navigation">
+            <div class="content-wrapper">
+                <div class="nav-content">
+                    <div class="logo-section">
+                        <img src="../assets/images/img_logo_lizzie_cardenas_versi_n2.png" alt="Dra. Lizzie Cárdenas Logo" class="logo" />
+                    </div>
+                    <div class="nav-links"></div>
+                        <a href="#" class="nav-link">INICIO</a>
+                        <a href="#" class="nav-link">SOBRE MÍ</a>
+                        <a href="#" class="nav-link">ESPECIALIDADES</a>
+                        <a href="#" class="nav-link">CONTACTO</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="content-wrapper">
+                <div class="hero-content">
+                    <h1 class="hero-title">Dra. Lizzie Cárdenas</h1>
+                    <h2 class="hero-subtitle">Ortodoncia y Odontología Integral</h2>
+                    <button class="cta-button">Solicita tu cita</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="content-wrapper">
+                <h2 class="section-title">Conoce a la doctora Lizzie Cárdenas</h2>
+                <div class="about-content">
+                    <img src="../assets/images/img_doctora.png" alt="Dra. Lizzie Cárdenas" class="doctor-image" />
+                    <div>
+                        <p class="about-text">
+                            La Dra. Lizzie Cárdenas es odontóloga con más de 25 años de experiencia y ortodoncista desde 2005. Se mantiene en constante actualización profesional, lo que garantiza tratamientos de alta calidad en un entorno seguro y amigable.
+                        </p>
+                        <p class="about-text">
+                            Cuenta con una sólida experiencia en atención infantil, conectando con los más pequeños de forma cercana y empática. ¡Con orgullo, hoy trata a los hijos de sus primeros pacientes niños!
+                        </p>
+                        <p class="about-text">
+                            En su consultorio recibirás una atención integral, no solo en ortodoncia y odontopediatría, sino también en otras áreas, gracias al trabajo conjunto con un equipo de especialistas.
+                        </p>
+                        <p class="about-text">
+                            Te invitamos a visitarnos y descubrir una experiencia dental diferente, cercana y profesional.
+                        </p>
+                        <button class="ver-mas-btn">Ver más</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Specialties Section -->
+        <section class="specialties-section">
+            <div class="content-wrapper">
+                <h2 class="section-title">Especialidades</h2>
+                <div class="specialties-content">
+                    <div class="specialty-item">
+                        <div class="specialty-text">
+                            <h3 class="specialty-title">Odontología Integral</h3>
+                            <p class="specialty-description">
+                                Tratamientos completos para la salud bucal: limpiezas, curaciones, restauraciones y prevención, con atención cercana y personalizada.
+                            </p>
+                            <button class="ver-mas-btn">Ver más</button>
+                        </div>
+                        <img src="../assets/images/img_pexels_karolina.png" alt="Odontología Integral" class="specialty-image" />
+                    </div>
+                    <div class="specialty-item">
+                        <div class="specialty-text">
+                            <h3 class="specialty-title">Ortodoncia Correctiva Fija</h3>
+                            <p class="specialty-description">
+                                Brackets metálicos o estéticos, ideales para casos complejos. Incluye sistemas de autoligado (Damon®).
+                            </p>
+                            <button class="ver-mas-btn">Ver más</button>
+                        </div>
+                        <img src="../assets/images/img_pexels_ggrudic_19328507.png" alt="Ortodoncia Correctiva Fija" class="specialty-image" />
+                    </div>
+                    <div class="specialty-item">
+                        <div class="specialty-text">
+                            <h3 class="specialty-title">Ortodoncia Invisible – Invisalign®</h3>
+                            <p class="specialty-description">
+                                Alineadores transparentes y removibles, cómodos y discretos. Corrige tu sonrisa con tecnología Invisalign® y planificación digital.
+                            </p>
+                            <button class="ver-mas-btn">Ver más</button>
+                        </div>
+                        <img src="../assets/images/img_121023_invisalign.png" alt="Invisalign" class="specialty-image" />
+                    </div>
+                    <div class="specialty-item">
+                        <div class="specialty-text">
+                            <h3 class="specialty-title">Odontopediatría</h3>
+                            <p class="specialty-description">
+                                Atención dental integral para niños, enfocada en prevención, confianza y cuidado en un ambiente amigable.
+                            </p>
+                            <button class="ver-mas-btn">Ver más</button>
+                        </div>
+                        <img src="../assets/images/img_vlcsnap_2025_08.png" alt="Odontopediatría" class="specialty-image" />
+                    </div>
+                    <div class="specialty-item">
+                        <div class="specialty-text">
+                            <h3 class="specialty-title">Ortopedia Funcional</h3>
+                            <p class="specialty-description">
+                                Tratamientos tempranos para guiar el desarrollo óseo y prevenir maloclusiones en niños en etapa de crecimiento.
+                            </p>
+                            <button class="ver-mas-btn">Ver más</button>
+                        </div>
+                        <img src="../assets/images/img_image_1.png" alt="Ortopedia Funcional" class="specialty-image" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="content-wrapper">
+                <h2 class="section-title">Algunas opiniones de nuestros pacientes</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <img src="../assets/images/img_five_stars_1.png" alt="5 stars" class="stars-image" />
+                        <p class="testimonial-text">
+                            "Nunca pensé que empezar ortodoncia a mi edad sería tan sencillo. La Dra. Lizzie tiene un trato muy humano y te hace sentir en buenas manos desde el primer día."
+                        </p>
+                        <p class="testimonial-author">Carlos A. (adulto con ortodoncia)</p>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <img src="../assets/images/img_five_stars_1.png" alt="5 stars" class="stars-image" />
+                        <p class="testimonial-text">
+                            "Mi hija tenía miedo de ir al dentista, pero con la Dra. Lizzie se sintió tranquila y cuidada. Ahora hasta le gusta ir a sus controles. Profesional, amable y súper preparada."
+                        </p>
+                        <p class="testimonial-author">Verónica T. (madre de paciente pediátrico)</p>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <img src="../assets/images/img_five_stars_1.png" alt="5 stars" class="stars-image" />
+                        <p class="testimonial-text">
+                            "Tenía muchas dudas sobre usar Invisalign®️, pero la Dra. Lizzie me explicó todo con paciencia y claridad. El tratamiento ha sido cómodo y los resultados son increíbles. ¡Recomendada al 100%!"
+                        </p>
+                        <p class="testimonial-author">María G. (paciente de ortodoncia invisible)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Form Section -->
+        <section class="contact-section" style="width:100%;padding-left:0;padding-right:0;">
+            <div class="content-wrapper">
+                <h2 class="contact-title">¿Tienes dudas sobre tu tratamiento dental?</h2>
+                <p class="contact-subtitle">
+                    Completa el siguiente formulario y te responderemos lo antes posible. Puedes resolver inquietudes o agendar una cita.
+                </p>
+                
+                <form>
+                    <div class="form-row">
+                        <input type="text" class="form-input" placeholder="Nombre" />
+                        <input type="email" class="form-input" placeholder="Correo electrónico" />
+                        <input type="tel" class="form-input" placeholder="Teléfono" />
+                    </div>
+                    <input type="text" class="form-input-2" placeholder="Asunto (ej: Consulta, Cita)"  />
+
+                    <textarea class="form-textarea" placeholder="Mensaje..." style="width: 100%;"></textarea>
+                    
+                    
+                    <button type="submit" class="submit-btn">Enviar mensaje</button>
+                </form>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="footer" style="width:100%;padding-left:0;padding-right:0;">
+            <div class="content-wrapper">
+                <div class="footer-content">
+                    <img src="../assets/images/img_logo_lizzie_car.png" alt="Dra. Lizzie Cárdenas Logo" class="footer-logo" />
+                    
+                    <div class="footer-info">
+                        <h3 class="footer-title">Información de contacto:</h3>
+                        <div class="footer-contact">
+                            <div class="footer-contact-item">
+                                <img src="../assets/images/img_phone_icon_footer.svg" alt="Phone" class="footer-icon" />
+                                <span>(+591) 62547130 / (2) 2799061</span>
+                            </div>
+                            <div class="footer-contact-item">
+                                <img src="../assets/images/img_vector_white_a700.svg" alt="Location" class="footer-icon" />
+                                <span>Calacoto calle 21 #8226 piso 2 oficina 7</span>
+                            </div>
+                            <div class="footer-contact-item">
+                                <img src="../assets/images/img_envelope_1.svg" alt="Email" class="footer-icon" />
+                                <span> lizzie_cardenas@yahoo.es</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <img src="../assets/images/img_invisalignprovi.png" alt="Invisalign Provider" class="footer-brand" />
+                </div>
+                
+                <div class="footer-disclaimer">
+                    <p>Damon® is a registered trademark of Ormco Corporation.</p>
+                    <p>Invisalign, the Invisalign logo, and iTero, among others, are trademarks and/or service marks of Align Technology, Inc. or its affiliates, and may be registered in the U.S. and/or other countries.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // make the navigation a sticky header
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('.navigation');
+            if (window.scrollY > 0) {
+                nav.classList.add('sticky');
+            } else {
+                nav.classList.remove('sticky');
+            }
+        });
+    </script>
+</body>
+</html>
