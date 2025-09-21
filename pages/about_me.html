@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dra. Lizzie Cárdenas - Ortodoncista La Paz | Invisalign Doctor</title>
+  <meta name="description" content="Dra. Lizzie Cárdenas, ortodoncista con +30 años experiencia en La Paz. Especialista en Invisalign, Sistema Damon, ortodoncia digital. Consultas en Calacoto." />
+  <meta name="keywords" content="ortodoncista La Paz, Invisalign Bolivia, Sistema Damon, ortodoncia digital, dentista Calacoto, Dra Lizzie Cárdenas" />
+     <link href="https://fonts.googleapis.com/css2?family=Molengo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Molengo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Molengo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">    
+ 
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Dra. Lizzie Cárdenas - Ortodoncista Especialista La Paz" />
+  <meta property="og:description" content="Ortodoncista con +30 años experiencia. Especialista en Invisalign, Sistema Damon, ortodoncia digital en La Paz Bolivia." />
+  
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Nunito Sans', Arial, sans-serif;
+      line-height: 1.6;
+      color: #000000;
+      background-color: #ffffff;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    /* Layout components */
+    .header {
+      background-color: #253854;
+      width: 100%;
+    }
+    
+    .header-top {
+      background-color: #253854;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      text-align: center;
+    }
+    
+    .header-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .header-contact-icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+    
+    .header-main {
+      background-color: #27c3ea;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    
+    .logo {
+      width: 200px;
+      height: auto;
+    }
+    
+    .nav-menu {
+      display: none;
+    }
+    
+    .hamburger {
+      display: block;
+      background: none;
+      border: none;
+      color: #253854;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 8px;
+    }
+    
+    .nav-menu.active {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .nav-item {
+      color: #253854;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      padding: 8px 16px;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-item:hover {
+      background-color: rgba(37, 56, 84, 0.1);
+      border-radius: 4px;
+    }
+    
+    /* Main content */
+    .main-content {
+      padding: 24px 16px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .hero-title {
+      font-family: 'Libre Franklin', serif;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 34px;
+      color: #253854;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    
+    .hero-image {
+      width: 100%;
+      height: auto;
+      margin-bottom: 32px;
+      border-radius: 8px;
+    }
+    
+    .content-text {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      color: #000000;
+      margin-bottom: 32px;
+      text-align: justify;
+    }
+    
+    .cta-button {
+      background-color: #86d7c1;
+      color: #253854;
+      border: none;
+      border-radius: 52px;
+      padding: 16px 24px;
+      font-family: 'Libre Franklin', serif;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      display: block;
+      margin: 0 auto;
+      text-decoration: none;
+      text-align: center;
+    }
+    
+    .cta-button:hover {
+      background-color: #7bc9b5;
+      transform: translateY(-2px);
+      box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Footer */
+    .footer {
+      background-color: #253854;
+      color: #ffffff;
+      padding: 32px 16px;
+      margin-top: 48px;
+    }
+    
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+    }
+    
+    .footer-main {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .footer-logo {
+      width: 200px;
+      height: auto;
+    }
+    
+    .footer-contact {
+      text-align: center;
+    }
+    
+    .footer-contact h3 {
+      font-family: 'Libre Franklin', serif;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 22px;
+      margin-bottom: 16px;
+    }
+    
+    .footer-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .footer-contact-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+    
+    .footer-contact-text {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    
+    .footer-brand {
+      width: 150px;
+      height: auto;
+      margin-top: 16px;
+    }
+    
+    .footer-disclaimer {
+      text-align: center;
+      font-size: 12px;
+      line-height: 16px;
+      margin-top: 16px;
+    }
+    
+    /* Typography */
+    .header-contact-text {
+      color: #ffffff;
+      font-family: 'Molengo', serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+    }
+    
+    /* Interactive states */
+    button:focus, a:focus {
+      outline: 2px solid #27c3ea;
+      outline-offset: 2px;
+    }
+    
+    /* Responsive media queries */
+    @media (min-width: 640px) {
+      .header-top {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 24px;
+      }
+      
+      .header-contact-icon {
+        width: 32px;
+        height: 32px;
+      }
+      
+      .header-contact-text {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      
+      .logo {
+        width: 280px;
+      }
+      
+      .hero-title {
+        font-size: 36px;
+        line-height: 44px;
+      }
+      
+      .content-text {
+        font-size: 18px;
+        line-height: 24px;
+      }
+      
+      .cta-button {
+        font-size: 24px;
+        line-height: 30px;
+        padding: 18px 28px;
+      }
+      
+      .main-content {
+        padding: 36px 24px;
+      }
+      
+      .footer {
+        padding: 40px 24px;
+      }
+      
+      .footer-logo {
+        width: 280px;
+      }
+      
+      .footer-contact-text {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .header-main {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .hamburger {
+        display: none;
+      }
+      
+      .nav-menu {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+      }
+      
+      .nav-item {
+        font-size: 18px;
+        line-height: 24px;
+      }
+      
+      .logo {
+        width: 350px;
+      }
+      
+      .hero-title {
+        font-size: 48px;
+        line-height: 58px;
+        text-align: left;
+      }
+      
+      .content-text {
+        font-size: 20px;
+        line-height: 27px;
+      }
+      
+      .footer-main {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      
+      .footer-contact {
+        text-align: left;
+      }
+      
+      .footer-contact-item {
+        justify-content: flex-start;
+      }
+      
+      .footer-brand {
+        width: 200px;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .header-contact-text {
+        font-size: 18px;
+        line-height: 22px;
+      }
+      
+      .logo {
+        width: 466px;
+      }
+      
+      .nav-item {
+        font-size: 20px;
+        line-height: 28px;
+      }
+      
+      .hero-title {
+        font-size: 56px;
+        line-height: 68px;
+      }
+      
+      .content-text {
+        font-size: 22px;
+        line-height: 30px;
+      }
+      
+      .cta-button {
+        font-size: 28px;
+        line-height: 34px;
+        padding: 22px 34px;
+      }
+      
+      .main-content {
+        padding: 52px 32px;
+      }
+      
+      .footer {
+        padding: 56px 32px;
+      }
+      
+      .footer-logo {
+        width: 400px;
+      }
+      
+      .footer-contact h3 {
+        font-size: 20px;
+        line-height: 24px;
+      }
+      
+      .footer-contact-text {
+        font-size: 18px;
+        line-height: 22px;
+      }
+      
+      .footer-brand {
+        width: 294px;
+      }
+    }
+    
+    @media (min-width: 1280px) {
+      .hero-title {
+        font-size: 64px;
+        line-height: 78px;
+      }
+      
+      .content-text {
+        font-size: 24px;
+        line-height: 32px;
+      }
+      
+      .cta-button {
+        font-size: 32px;
+        line-height: 38px;
+      }
+    }
+  </style>
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fmiguelsa9614back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-top">
+      <div class="header-contact-item">
+        <img src="../assets/images/img_vector.png" alt="Teléfono" class="header-contact-icon" />
+        <span class="header-contact-text">(+591) 62547130 / (2) 2799061</span>
+      </div>
+      <div class="header-contact-item">
+        <img src="../assets/images/img_envelope_1.svg" alt="Email" class="header-contact-icon" />
+        <span class="header-contact-text">lizzie_cardenas@yahoo.es</span>
+      </div>
+      <div class="header-contact-item">
+        <img src="../assets/images/img_vector_white_a700.svg" alt="Ubicación" class="header-contact-icon" />
+        <span class="header-contact-text">Calacoto calle 21 #8226 piso 2 oficina 7</span>
+      </div>
+    </div>
+    
+    <div class="header-main">
+      <img src="../assets/images/img_logo_lizzie_cardenas_versi_n2.png" alt="Dra. Lizzie Cárdenas - Logo" class="logo" />
+      
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menú de navegación">☰</button>
+      
+      <nav class="nav-menu" id="navMenu">
+        <a href="#inicio" class="nav-item">INICIO</a>
+        <a href="#sobre-mi" class="nav-item">SOBRE MÍ</a>
+        <a href="#especialidades" class="nav-item">ESPECIALIDADES</a>
+        <a href="#contacto" class="nav-item">CONTACTO</a>
+      </nav>
+    </div>
+  </header>
+
+          <!-- <nav class="navigation">
+            <div class="content-wrapper">
+                <div class="nav-content">
+                    <div class="logo-section">
+                        <img src="../assets/images/img_logo_lizzie_cardenas_versi_n2.png" alt="Dra. Lizzie Cárdenas Logo" class="logo" />
+                    </div>
+                    <div class="nav-links"></div>
+                        <a href="#hero-content" class="nav-link">INICIO</a>
+                        <a href="#about-content" class="nav-link">SOBRE MÍ</a>
+                        <a href="#specialties-content" class="nav-link">ESPECIALIDADES</a>
+                        <a href="#contact-content" class="nav-link">CONTACTO</a>
+                    </div>
+                </div>
+            </div>
+        </nav> -->
+
+  <main class="main-content">
+    <section>
+      <h1 class="hero-title">Conoce a la doctora Lizzie Cárdenas</h1>
+      
+      <img src="../assets/images/img_dentista.png" alt="Dra. Lizzie Cárdenas realizando tratamiento de ortodoncia en su consulta dental moderna" class="hero-image" />
+      
+      <div class="content-text">
+        <p>La Dra. Lizzie Cárdenas es cirujano dentista formada en la Universidad Mayor de San Andrés (UMSA), con especialización en Ortodoncia y Ortopedia Dento Maxilofacial por la Universidad de Chile. Complementó su formación con un Diplomado en Educación Superior en la Universidad Católica Boliviana, así como un Diplomado en Odontopediatría.</p>
+        
+        <p>Se encuentra certificada en diversas técnicas de ortodoncia avanzada, incluyendo:</p>
+        
+        <ul style="margin: 16px 0; padding-left: 20px;">
+          <li>Sistema Damon® (autoligado)</li>
+          <li>Técnica MEAW (Multiloop Edgewise Archwire)</li>
+          <li>Ortodoncia Digital con Orthosoft (Santiago de Chile)</li>
+          <li>Ortodoncia Invisible como Invisalign Doctor®</li>
+        </ul>
+        
+        <p>Además, ha realizado cursos de actualización en estética dental, como carillas en resina compuesta.</p>
+        
+        <p>Es miembro activo de reconocidas instituciones odontológicas nacionales e internacionales, como:</p>
+        <ul style="margin: 16px 0; padding-left: 20px;">
+          <li>Colegio de Odontólogos de La Paz</li>
+          <li>Sociedad Boliviana de Ortodoncia (SBO y SBO La Paz)</li>
+          <li>Asociación Latinoamericana de Ortodoncistas (ALADO)</li>
+          <li>World Federation of Orthodontists (WFO)</li>
+        </ul>
+        
+        <p>Con más de 30 años de experiencia en la práctica clínica, la Dra. Cárdenas ha desarrollado una atención integral en ortodoncia y odontología infantil. Además, se desempeña como docente de posgrado en distintas universidades de La Paz.</p>
+        
+        <p>Ha ocupado cargos de liderazgo dentro del gremio odontológico, incluyendo:</p>
+        <ul style="margin: 16px 0; padding-left: 20px;">
+          <li>Past presidenta de la Sociedad Boliviana de Ortodoncia – La Paz</li>
+          <li>Past tesorera de la SBO nacional y SBO La Paz</li>
+        </ul>
+        
+        <p>¿Estás buscando mejorar tu salud dental o tu sonrisa? La Dra. Lizzie puede ayudarte. Contáctala aquí y agenda tu consulta.</p>
+      </div>
+      
+      <a href="#contacto" class="cta-button">Solicita tu cita</a>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacto">
+    <div class="footer-content">
+      <div class="footer-main">
+        <img src="../assets/images/img_logo_lizzie_car.png" alt="Dra. Lizzie Cárdenas - Logo Footer" class="footer-logo" />
+        
+        <div class="footer-contact">
+          <h3>Información de contacto:</h3>
+          
+          <div class="footer-contact-item">
+            <img src="../assets/images/img_phone_icon_footer.svg" alt="Teléfono" class="footer-contact-icon" />
+            <span class="footer-contact-text">(+591) 62547130 / (2) 2799061</span>
+          </div>
+          
+          <div class="footer-contact-item">
+            <img src="../assets/images/img_vector_white_a700.svg" alt="Ubicación" class="footer-contact-icon" />
+            <span class="footer-contact-text">Calacoto calle 21 #8226 piso 2 oficina 7</span>
+          </div>
+          
+          <div class="footer-contact-item">
+            <img src="../assets/images/img_envelope_1.svg" alt="Email" class="footer-contact-icon" />
+            <span class="footer-contact-text">lizzie_cardenas@yahoo.es</span>
+          </div>
+        </div>
+        
+        <img src="../assets/images/img_invisalignprovi.png" alt="Invisalign Provider" class="footer-brand" />
+      </div>
+      
+      <div class="footer-disclaimer">
+        <p>Damon® is a registered trademark of Ormco Corporation.</p>
+        <p>Invisalign, the Invisalign logo, and iTero, among others, are trademarks and/or service marks of Align Technology, Inc. or its affiliates, and may be registered in the U.S. and/or other countries.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+
+    function toggleMenu() {
+
+      const navMenu = document.getElementById('navMenu');
+
+      navMenu.classList.toggle('active');
+
+    }
+       
+    document.querySelectorAll('.nav-item').forEach(item => {
+
+      item.addEventListener('click', () => {
+
+        const navMenu = document.getElementById('navMenu');
+
+        navMenu.classList.remove('active');
+
+      }
+);
+
+    }
+);
+
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+      anchor.addEventListener('click', function (e) {
+
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+
+        if (target) {
+
+          target.scrollIntoView({
+
+            behavior: 'smooth',
+            block: 'start'
+          }
+);
+
+        }
+
+      }
+);
+
+    }
+);
+
+  
+</script>
+</body>
+</html>
