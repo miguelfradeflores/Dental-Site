@@ -1,130 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Molengo&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Molengo&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Molengo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Shared styles for header, footer, and common components -->
+    <link rel="stylesheet" href="../assets/css/shared-styles.css">
+    
     <title>Dra. Lizzie Cárdenas - Ortodoncia y Odontología Integral</title>
     <style>
-        /* Reset and base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Nunito Sans', Arial, sans-serif;
-            line-height: 1.6;
-            color: #000000;
-            background-color: #ffffff;
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        
-        /* Layout components */
-        .main-container {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .content-wrapper {
-            width: 100%;
-            max-width: 1440px;
-            margin: 0 auto;
-        }
-        
-        /* Header styles */
-        .top-header {
-            width: 100%;
-            background-color: #253854;
-            padding: 8px 16px;
-        }
-        
-        .header-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            text-align: center;
-        }
-        
-        .header-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: #ffffff;
-            font-family: 'Molengo', serif;
-            font-size: 32px;
-            line-height: 38px;
-        }
-        
-        .header-icon {
-            width: 53px;
-            height: 53px;
-        }
-        
-        /* Navigation */
-        .navigation {
-            width: 100%;
-            background-color: #27c3ea;
-            padding: 12px 16px;
-            position: sticky;
-            top: 0;
-        }
-        
-        .nav-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 16px;
-        }
-        
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-        
-        .logo {
-            width: 466px;
-            height: 100px;
-        }
-        
-        .nav-menu {
-            display: none;
-        }
-        
-        .nav-links {
-            display: flex; 
-            flex-direction: column;
-            text-align: center;
-        }
-        
-        .nav-link {
-            font-family: 'Nunito Sans', sans-serif;
-            font-size: 32px;
-            font-weight: 700;
-            color: #253854;
-            text-decoration: none;
-            padding: 8px 16px;
-
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
-        }
+        /* Page-specific styles for home page */
         
         /* Hero section */
         .hero-section {
@@ -151,7 +36,6 @@
             line-height: 1.2;
             color: #000000;
             margin-bottom: 16px;
-            align
         }
         
         .hero-subtitle {
@@ -161,25 +45,6 @@
             line-height: 1.1;
             color: #000000;
             margin-bottom: 24px;
-        }
-        
-        .cta-button {
-            background-color: #86d7c1;
-            color: #253854;
-            font-family: 'Libre Franklin', sans-serif;
-            font-size: 24px;
-            font-weight: 700;
-            padding: 16px 24px;
-            border: none;
-            border-radius: 52px;
-            cursor: pointer;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            transition: all 0.3s ease;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
         }
         
         /* About section */
@@ -208,7 +73,6 @@
             max-width: 550px;
             border-radius: 8px;
             vertical-align: top;
-            /* align-self: center; */
         }
         
         .about-text {
@@ -254,30 +118,6 @@
 
         .specialty-item {
             display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .specialty-text {
-            flex: 1;
-            padding-right: 24px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .specialty-image {
-            max-width: 400px;
-            min-width: 100px;
-            border-radius: 8px;
-            align-self: center;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        }
-        }
-        
-        .specialty-item {
-            display: flex;
             flex-direction: column;
             gap: 16px;
         }
@@ -308,7 +148,6 @@
             max-width: 500px;
             align-self: center;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
         }
         
         /* Testimonials section */
@@ -446,99 +285,8 @@
             box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
         }
         
-        /* Footer */
-        .footer {
-            background-color: #253854;
-            color: #ffffff;
-            padding: 32px 16px;
-            margin-top: 32px;
-        }
-        
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-        
-        .footer-logo {
-            width: 534px;
-            height: 112px;
-            align-self: center;
-        }
-        
-        .footer-info {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-        
-        .footer-title {
-            font-size: 33px;
-            font-family: 'Libre Franklin', sans-serif;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-        
-        .footer-contact {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        
-        .footer-contact-item {
-            display: flex;
-            align-items: center;
-            gap: -2%;
-            font-size: 32px;
-            font-family: 'Molengo', serif;
-        }
-        
-        .footer-icon {
-            width: 36px;
-            height: 36px;
-        }
-        
-        .footer-brand {
-            width: 294px;
-            height: 77px;
-            align-self: center;
-            margin-top: 16px;
-        }
-        
-        .footer-disclaimer {
-            font-size: 19px;
-            font-family: 'Molengo', sans-serif;
-            text-align: center;
-            margin-top: 16px;
-            line-height: 1.4;
-        }
-        
-        /* Responsive media queries */
+        /* Responsive media queries for page-specific elements */
         @media (min-width: 640px) {
-            .header-content {
-                flex-direction: row;
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-            
-            .header-item {
-                font-size: 42px;
-            }
-            
-            .nav-content {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-            
-            .nav-links {
-                flex-direction: row;
-                gap: 24px;
-            }
-            
-            .nav-link {
-                font-size: 20px;
-            }
-            
             .hero-title {
                 font-size: 40px;
             }
@@ -547,14 +295,8 @@
                 font-size: 36px;
             }
             
-            .cta-button {
-                font-size: 28px;
-                padding: 18px 28px;
-            }
-            
             .about-content {
                 flex-direction: row;
-                /* align-items: flex-start; */
             }
             
             .doctor-image {
@@ -615,27 +357,9 @@
                 flex: 1;
                 font-size: 32px;
             }
-            
-            .footer-content {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: flex-start;
-            }
-            
-            .footer-info {
-                flex: 1;
-            }
         }
         
         @media (min-width: 768px) {
-            .top-header {
-                padding: 8px 32px;
-            }
-            
-            .navigation {
-                padding: 12px 32px;
-            }
-            
             .hero-section {
                 padding: 120px 32px;
                 min-height: 500px;
@@ -647,11 +371,6 @@
             
             .hero-subtitle {
                 font-size: 48px;
-            }
-            
-            .cta-button {
-                font-size: 32px;
-                padding: 20px 32px;
             }
             
             .about-section,
@@ -692,32 +411,15 @@
             .contact-subtitle {
                 font-size: 32px;
             }
-            
-            .footer {
-                padding: 48px 32px;
-            }
         }
         
         @media (min-width: 1024px) {
-            .header-item {
-                font-size: 32px;
-            }
-            
-            .nav-link {
-                font-size: 24px;
-            }
-            
             .hero-title {
                 font-size: 60px;
             }
             
             .hero-subtitle {
                 font-size: 56px;
-            }
-            
-            .cta-button {
-                font-size: 36px;
-                padding: 22px 34px;
             }
             
             .section-title {
@@ -760,10 +462,6 @@
             
             .hero-subtitle {
                 font-size: 96px;
-            }
-            
-            .cta-button {
-                font-size: 50px;
             }
             
             .section-title {

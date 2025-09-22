@@ -2,11 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
-     <link href="https://fonts.googleapis.com/css2?family=Molengo&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Molengo&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Molengo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">    
- 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Shared styles for header, footer, and common components -->
+    <link rel="stylesheet" href="../assets/css/shared-styles.css">
+    
     <title>Dra. Lizzie Cardenas - Información de Contacto</title>
     <style>
         /* Reset and base styles */
@@ -22,116 +22,105 @@
             line-height: 1.6;
         }
         
-        /* Layout components */
-        .main-container {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            min-height: 100vh;
+        img {
+            max-width: 100%;
+            height: auto;
         }
         
-        .header-section {
-            background-color: #253854;
+        /* Layout components */
+        .main-container {
             width: 100%;
-            padding: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+        
+        /* Header styles */
+        .top-header {
+            width: 100%;
+            background-color: #253854;
+            padding: 8px 16px;
         }
         
         .header-content {
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             gap: 8px;
-            width: 100%;
-            max-width: 1440px;
-            margin: 0 auto;
+            text-align: center;
         }
         
-        .contact-info-row {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: end;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-        
-        .contact-item {
+        .header-item {
             display: flex;
             align-items: center;
-            gap: 4px;
-            margin-bottom: 8px;
-        }
-        
-        .contact-icon {
-            width: 26px;
-            height: 27px;
-        }
-        
-        .contact-text {
-            font-size: 16px;
-            font-family: Molengo, serif;
-            font-weight: 400;
+            gap: 12px;
             color: #ffffff;
-            line-height: 1.2;
+            font-family: 'Molengo', serif;
+            font-size: 32px;
+            line-height: 38px;
         }
         
-        .navigation-section {
-            background-color: #27c3ea;
+        .header-icon {
+            width: 53px;
+            height: 53px;
+        }
+        
+        /* Navigation */
+        .navigation {
             width: 100%;
-            padding: 12px;
+            background-color: #27c3ea;
+            padding: 12px 16px;
+            position: sticky;
+            top: 0;
         }
         
         .nav-content {
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            gap: 18px;
-            width: 100%;
-            max-width: 1440px;
-            margin: 0 auto;
+            gap: 16px;
         }
         
-        .logo-nav-row {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 18px;
-            width: 100%;
-        }
-        
-        .logo-container {
+        .logo-section {
             display: flex;
             align-items: center;
-            gap: 18px;
+            gap: 16px;
         }
         
-        .logo-image {
-            width: 233px;
-            height: 50px;
+        .logo {
+            width: 466px;
+            height: 100px;
         }
         
         .nav-menu {
-            display: flex;
+            display: none;
+        }
+        
+        .nav-links {
+            display: flex; 
             flex-direction: column;
-            gap: 18px;
-            align-items: center;
+            text-align: center;
         }
         
         .nav-link {
-            font-size: 16px;
-            font-family: 'Nunito Sans', Arial, sans-serif;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 32px;
             font-weight: 700;
             color: #253854;
             text-decoration: none;
-            line-height: 1.4;
-            transition: color 0.3s ease;
+            padding: 8px 16px;
+            transition: all 0.3s ease;
         }
         
         .nav-link:hover {
-            color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
         }
         
         .content-section {
@@ -223,123 +212,91 @@
             border: 0;
         }
         
-        .footer-section {
+        /* Footer */
+        .footer {
             background-color: #253854;
-            width: 100%;
-            padding: 28px 26px;
-            margin-top: 119px;
+            color: #ffffff;
+            padding: 32px 16px;
+            margin-top: 32px;
         }
         
         .footer-content {
-            width: 100%;
-            max-width: 1440px;
-            margin: 0 auto;
             display: flex;
             flex-direction: column;
-            gap: 16px;
-        }
-        
-        .footer-main-row {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            align-items: center;
+            gap: 24px;
         }
         
         .footer-logo {
-            width: 267px;
-            height: 56px;
-            margin-top: 16px;
+            width: 534px;
+            height: 112px;
+            align-self: center;
         }
         
-        .footer-info-section {
+        .footer-info {
             display: flex;
             flex-direction: column;
-            align-items: center;
             gap: 16px;
-            width: 100%;
         }
         
-        .footer-contact-title {
-            font-size: 17px;
-            font-family: 'Libre Franklin', Arial, sans-serif;
+        .footer-title {
+            font-size: 33px;
+            font-family: 'Libre Franklin', sans-serif;
             font-weight: 700;
-            color: #ffffff;
-            line-height: 1.2;
-            text-align: center;
+            margin-bottom: 8px;
         }
         
-        .footer-contact-row {
+        .footer-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .footer-contact-item {
             display: flex;
             align-items: center;
-            gap: 4px;
-            justify-content: center;
+            gap: -2%;
+            font-size: 32px;
+            font-family: 'Molengo', serif;
         }
         
-        .footer-contact-icon {
-            width: 17px;
-            height: 18px;
+        .footer-icon {
+            width: 36px;
+            height: 36px;
         }
         
-        .footer-contact-text {
-            font-size: 16px;
-            font-family: Molengo, serif;
-            font-weight: 400;
-            color: #ffffff;
-            line-height: 1.2;
-        }
-        
-        .invisalign-logo {
-            width: 147px;
-            height: 38px;
+        .footer-brand {
+            width: 294px;
+            height: 77px;
+            align-self: center;
             margin-top: 16px;
         }
         
         .footer-disclaimer {
-            font-size: 10px;
-            font-family: 'Mukta Malar', Arial, sans-serif;
-            font-weight: 400;
-            color: #ffffff;
+            font-size: 19px;
+            font-family: 'Molengo', sans-serif;
             text-align: center;
-            line-height: 1.6;
-            margin-top: 10px;
-        }
-        
-        .footer-trademark {
-            font-size: 10px;
-            font-family: Molengo, serif;
-            font-weight: 400;
-            color: #ffffff;
-            text-align: center;
-            line-height: 1.2;
-            margin-top: 5px;
+            margin-top: 16px;
+            line-height: 1.4;
         }
         
         /* Responsive media queries */
         @media (min-width: 640px) {
             .header-content {
-                padding-left: 12px;
-                padding-right: 12px;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
             }
             
-            .contact-info-row {
-                flex-wrap: nowrap;
-                gap: 12px;
+            .header-item {
+                font-size: 42px;
             }
             
-            .contact-text {
-                font-size: 20px;
+            .nav-content {
+                flex-direction: row;
+                justify-content: space-between;
             }
             
-            .contact-detail-text {
-                font-size: 30px;
-            }
-            
-            .address-text {
-                font-size: 30px;
-            }
-            
-            .nav-menu {
+            .nav-links {
                 flex-direction: row;
                 gap: 24px;
             }
@@ -352,6 +309,14 @@
                 font-size: 40px;
             }
             
+            .address-text {
+                font-size: 30px;
+            }
+            
+            .contact-detail-text {
+                font-size: 30px;
+            }
+            
             .whatsapp-button {
                 width: 133px;
                 height: 133px;
@@ -361,24 +326,29 @@
                 max-width: 375px;
                 height: 375px;
             }
+            
+            .footer-content {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+            
+            .footer-info {
+                flex: 1;
+            }
         }
         
         @media (min-width: 768px) {
-            .header-content {
-                padding-left: 16px;
-                padding-right: 16px;
+            .top-header {
+                padding: 8px 32px;
             }
             
-            .contact-text {
-                font-size: 24px;
+            .navigation {
+                padding: 12px 32px;
             }
             
-            .contact-detail-text {
-                font-size: 36px;
-            }
-            
-            .address-text {
-                font-size: 36px;
+            .header-item {
+                font-size: 32px;
             }
             
             .nav-link {
@@ -389,9 +359,12 @@
                 font-size: 48px;
             }
             
-            .logo-nav-row {
-                flex-direction: row;
-                justify-content: space-between;
+            .address-text {
+                font-size: 36px;
+            }
+            
+            .contact-detail-text {
+                font-size: 36px;
             }
             
             .whatsapp-button {
@@ -404,45 +377,37 @@
                 height: 438px;
             }
             
-            .footer-main-row {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: flex-start;
+            .content-section {
+                padding: 48px 32px;
             }
             
-            .footer-info-section {
-                align-items: flex-end;
-                max-width: 50%;
+            .footer {
+                padding: 48px 32px;
             }
         }
         
         @media (min-width: 1024px) {
-            .header-content {
-                padding-left: 24px;
-                padding-right: 24px;
-            }
-            
-            .contact-text {
+            .header-item {
                 font-size: 32px;
-            }
-            
-            .contact-detail-text {
-                font-size: 48px;
-            }
-            
-            .address-text {
-                font-size: 48px;
             }
             
             .nav-link {
-                font-size: 32px;
+                font-size: 24px;
             }
             
             .page-title {
                 font-size: 64px;
             }
             
-            .logo-image {
+            .address-text {
+                font-size: 48px;
+            }
+            
+            .contact-detail-text {
+                font-size: 48px;
+            }
+            
+            .logo {
                 width: 466px;
                 height: 100px;
             }
@@ -462,24 +427,20 @@
                 height: 112px;
             }
             
-            .invisalign-logo {
+            .footer-brand {
                 width: 294px;
                 height: 76px;
             }
             
-            .footer-contact-title {
+            .footer-title {
                 font-size: 33px;
             }
             
-            .footer-contact-text {
+            .footer-contact-item {
                 font-size: 32px;
             }
             
             .footer-disclaimer {
-                font-size: 19px;
-            }
-            
-            .footer-trademark {
                 font-size: 19px;
             }
         }
@@ -488,32 +449,34 @@
 </head>
 <body>
     <div class="main-container">
-        <header class="header-section">
-            <div class="header-content">
-                <div class="contact-info-row">
-                    <div class="contact-item">
-                        <img src="../assets/images/img_vector.png" alt="Phone" class="contact-icon" />
-                        <span class="contact-text">(+591) 62547130 / (2) 2799061</span>
+        <!-- Header -->
+        <header class="top-header">
+            <div class="content-wrapper">
+                <div class="header-content">
+                    <div class="header-item">
+                        <img src="../assets/images/img_vector.png" alt="Phone" class="header-icon" />
+                        <span>(+591) 62547130 / (2) 2799061</span>
                     </div>
-                    <div class="contact-item">
-                        <img src="../assets/images/img_envelope_1.svg" alt="Email" class="contact-icon" />
-                        <span class="contact-text">lizzie_cardenas@yahoo.es</span>
+                    <div class="header-item">
+                        <img src="../assets/images/img_envelope_1.svg" alt="Email" class="header-icon" />
+                        <span>lizzie_cardenas@yahoo.es</span>
                     </div>
-                    <div class="contact-item">
-                        <img src="../assets/images/img_vector_white_a700.svg" alt="Location" class="contact-icon" />
-                        <span class="contact-text">Calacoto calle 21 #8226 piso 2 oficina 7</span>
+                    <div class="header-item">
+                        <img src="../assets/images/img_vector_white_a700.svg" alt="Location" class="header-icon" />
+                        <span>Calacoto calle 21 #8226 piso 2 oficina 7</span>
                     </div>
                 </div>
             </div>
         </header>
         
-        <nav class="navigation-section">
-            <div class="nav-content">
-                <div class="logo-nav-row">
-                    <div class="logo-container">
-                        <img src="../assets/images/img_logo_lizzie_cardenas_versi_n2.png" alt="Dra. Lizzie Cardenas Logo" class="logo-image" />
+        <!-- Navigation -->
+        <nav class="navigation">
+            <div class="content-wrapper">
+                <div class="nav-content">
+                    <div class="logo-section">
+                        <img src="../assets/images/img_logo_lizzie_cardenas_versi_n2.png" alt="Dra. Lizzie Cardenas Logo" class="logo" />
                     </div>
-                    <div class="nav-menu">
+                    <div class="nav-links">
                         <a href="#" class="nav-link">INICIO</a>
                         <a href="#" class="nav-link">SOBRE MÍ</a>
                         <a href="#" class="nav-link">ESPECIALIDADES</a>
@@ -524,66 +487,79 @@
         </nav>
         
         <main class="content-section">
-            <div class="content-container">
-                <h1 class="page-title">Información de Contacto</h1>
-                
-                <div class="contact-details">
-                    <p class="address-text">Calacoto calle 21 #8226 piso 2 oficina 7</p>
+            <div class="content-wrapper">
+                <div class="content-container">
+                    <h1 class="page-title">Información de Contacto</h1>
                     
-                    <div class="contact-detail-row">
-                        <img src="../assets/images/img_phone_line_icon.svg" alt="Phone" class="contact-detail-icon" />
-                        <span class="contact-detail-text">(+591) 62547130 / (2) 2799061</span>
-                    </div>
-                    
-                    <div class="contact-detail-row">
-                        <img src="../assets/images/img_vector_black_900.svg" alt="Email" class="contact-detail-icon" />
-                        <span class="contact-detail-text">lizzie_cardenas@yahoo.es</span>
-                    </div>
-                    
-                    <img src="../assets/images/img_wa_whatsapp_icon.png" alt="WhatsApp" class="whatsapp-button" onclick="window.open('https://wa.me/59162547130', '_blank')" />
-                    
-                    <div class="map-container">
-                        <!-- <iframe title="Ubicación - Calacoto calle 21 #8226 piso 2 oficina 7" src="https://www.openstreetmap.org/export/embed.html?bbox=-68.0900,-16.5400,-68.0800,-16.5300&layer=mapnik" class="map-iframe" allowfullscreen loading="lazy">
-                        </iframe> -->
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956.1796833669813!2d-68.0786059306185!3d-16.5402913990131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f21de565b8ffb%3A0xfa8b2b3e1d2c1cfa!2sDra.%20Lizzie%20C%C3%A1rdenas%20-%20Consultorio%20dental!5e0!3m2!1ses-419!2sbo!4v1758407861491!5m2!1ses-419!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="contact-details">
+                        <p class="address-text">Calacoto calle 21 #8226 piso 2 oficina 7</p>
+                        
+                        <div class="contact-detail-row">
+                            <img src="../assets/images/img_phone_line_icon.svg" alt="Phone" class="contact-detail-icon" />
+                            <span class="contact-detail-text">(+591) 62547130 / (2) 2799061</span>
+                        </div>
+                        
+                        <div class="contact-detail-row">
+                            <img src="../assets/images/img_vector_black_900.svg" alt="Email" class="contact-detail-icon" />
+                            <span class="contact-detail-text">lizzie_cardenas@yahoo.es</span>
+                        </div>
+                        
+                        <img src="../assets/images/img_wa_whatsapp_icon.png" alt="WhatsApp" class="whatsapp-button" onclick="window.open('https://wa.me/59162547130', '_blank')" />
+                        
+                        <div class="map-container">
+                            <!-- <iframe title="Ubicación - Calacoto calle 21 #8226 piso 2 oficina 7" src="https://www.openstreetmap.org/export/embed.html?bbox=-68.0900,-16.5400,-68.0800,-16.5300&layer=mapnik" class="map-iframe" allowfullscreen loading="lazy">
+                            </iframe> -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956.1796833669813!2d-68.0786059306185!3d-16.5402913990131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f21de565b8ffb%3A0xfa8b2b3e1d2c1cfa!2sDra.%20Lizzie%20C%C3%A1rdenas%20-%20Consultorio%20dental!5e0!3m2!1ses-419!2sbo!4v1758407861491!5m2!1ses-419!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
         
-        <footer class="footer-section">
-            <div class="footer-content">
-                <div class="footer-main-row">
-                    <img src="../assets/images/img_logo_lizzie_car.png" alt="Dra. Lizzie Cardenas Logo" class="footer-logo" />
+        <!-- Footer -->
+        <footer class="footer" style="width:100%;padding-left:0;padding-right:0;">
+            <div class="content-wrapper">
+                <div class="footer-content">
+                    <img src="../assets/images/img_logo_lizzie_car.png" alt="Dra. Lizzie Cárdenas Logo" class="footer-logo" />
                     
-                    <div class="footer-info-section">
-                        <div>
-                            <p class="footer-contact-title">Información de contacto:</p>
-                            
-                            <div class="footer-contact-row">
-                                <img src="../assets/images/img_phone_icon_footer.svg" alt="Phone" class="footer-contact-icon" />
-                                <span class="footer-contact-text">(+591) 62547130 / (2) 2799061</span>
+                    <div class="footer-info">
+                        <h3 class="footer-title">Información de contacto:</h3>
+                        <div class="footer-contact">
+                            <div class="footer-contact-item">
+                                <img src="../assets/images/img_phone_icon_footer.svg" alt="Phone" class="footer-icon" />
+                                <span>(+591) 62547130 / (2) 2799061</span>
                             </div>
-                            
-                            <div class="footer-contact-row">
-                                <img src="../assets/images/img_vector_white_a700.svg" alt="Location" class="footer-contact-icon" />
-                                <span class="footer-contact-text">Calacoto calle 21 #8226 piso 2 oficina 7</span>
+                            <div class="footer-contact-item">
+                                <img src="../assets/images/img_vector_white_a700.svg" alt="Location" class="footer-icon" />
+                                <span>Calacoto calle 21 #8226 piso 2 oficina 7</span>
                             </div>
-                            
-                            <div class="footer-contact-row">
-                                <img src="../assets/images/img_envelope_1.svg" alt="Email" class="footer-contact-icon" />
-                                <span class="footer-contact-text">lizzie_cardenas@yahoo.es</span>
+                            <div class="footer-contact-item">
+                                <img src="../assets/images/img_envelope_1.svg" alt="Email" class="footer-icon" />
+                                <span> lizzie_cardenas@yahoo.es</span>
                             </div>
                         </div>
-                        
-                        <img src="../assets/images/img_invisalignprovi.png" alt="Invisalign Provider" class="invisalign-logo" />
                     </div>
+                    
+                    <img src="../assets/images/img_invisalignprovi.png" alt="Invisalign Provider" class="footer-brand" />
                 </div>
                 
-                <p class="footer-disclaimer">Damon® is a registered trademark of Ormco Corporation.</p>
-                <p class="footer-trademark">Invisalign, the Invisalign logo, and iTero, among others, are trademarks and/or service marks of Align Technology, Inc. or its affiliates, and may be registered in the U.S. and/or other countries.</p>
+                <div class="footer-disclaimer">
+                    <p>Damon® is a registered trademark of Ormco Corporation.</p>
+                    <p>Invisalign, the Invisalign logo, and iTero, among others, are trademarks and/or service marks of Align Technology, Inc. or its affiliates, and may be registered in the U.S. and/or other countries.</p>
+                </div>
             </div>
         </footer>
     </div>
+    <script>
+        // make the navigation a sticky header
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('.navigation');
+            if (window.scrollY > 0) {
+                nav.classList.add('sticky');
+            } else {
+                nav.classList.remove('sticky');
+            }
+        });
+    </script>
 </body>
 </html>

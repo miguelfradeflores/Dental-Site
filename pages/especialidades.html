@@ -1,11 +1,11 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link href="https://fonts.googleapis.com/css2?family=Molengo&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Molengo&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Molengo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">    
- 
+  
+  <!-- Shared styles for header, footer, and common components -->
+  <link rel="stylesheet" href="../assets/css/shared-styles.css">
 
   <title>Especialidades Dentales | Dra. Lizzie Cardenas | Odontología Integral</title>
   <meta name="description" content="Especialidades dentales profesionales: odontología integral, ortodoncia fija e invisible Invisalign, odontopediatría y ortopedia funcional. Dra. Lizzie Cardenas en Calacoto, La Paz." />
@@ -17,142 +17,7 @@
   <meta property="og:description" content="Servicios odontológicos especializados con tecnología moderna y atención personalizada en La Paz, Bolivia." />
   
   <style>
-    /* Reset and base styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Nunito Sans', Arial, sans-serif;
-      line-height: 1.6;
-      color: #000000;
-      background-color: #ffffff;
-    }
-    
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-    
-    /* Layout components */
-    .main-container {
-      display: flex;
-      flex-direction: column;
-      gap: 50px;
-      justify-content: flex-start;
-      align-items: center;
-      width: 100%;
-      background-color: #ffffff;
-    }
-    
-    .header {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      width: 100%;
-    }
-    
-    .header-top {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      padding: 8px;
-      background-color: #253854;
-      gap: 8px;
-    }
-    
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      text-align: center;
-    }
-    
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    
-    .contact-icon {
-      width: 24px;
-      height: auto;
-      flex-shrink: 0;
-    }
-    
-    .contact-text {
-      font-size: 14px;
-      font-family: Molengo, serif;
-      font-weight: 400;
-      line-height: 1.2;
-      color: #ffffff;
-    }
-    
-    .header-nav {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      padding: 12px;
-      background-color: #27c3ea;
-    }
-    
-    .logo {
-      width: 200px;
-      height: auto;
-    }
-    
-    .nav-menu {
-      display: none;
-    }
-    
-    .hamburger {
-      display: block;
-      background: none;
-      border: none;
-      color: #253854;
-      font-size: 24px;
-      cursor: pointer;
-      padding: 8px;
-    }
-    
-    .nav-links {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      align-items: center;
-      width: 100%;
-    }
-    
-    .nav-link {
-      font-size: 18px;
-      font-family: 'Nunito Sans', Arial, sans-serif;
-      font-weight: 700;
-      line-height: 1.4;
-      color: #253854;
-      text-decoration: none;
-      padding: 8px 16px;
-      border-radius: 4px;
-      transition: all 0.3s ease;
-    }
-    
-    .nav-link:hover {
-      background-color: rgba(37, 56, 84, 0.1);
-      transform: translateY(-2px);
-    }
-    
-    /* Main content */
+    /* Page-specific styles for Especialidades */
     .content-section {
       display: flex;
       flex-direction: column;
@@ -171,15 +36,6 @@
       justify-content: flex-start;
       align-items: flex-start;
       width: 100%;
-    }
-    
-    .main-title {
-      font-size: 32px;
-      font-family: 'Libre Franklin', Arial, sans-serif;
-      font-weight: 700;
-      line-height: 1.2;
-      color: #253854;
-      margin-left: 4px;
     }
     
     .specialties-list {
@@ -232,161 +88,11 @@
     }
     
     .cta-button {
-      font-size: 24px;
-      font-family: 'Libre Franklin', Arial, sans-serif;
-      font-weight: 700;
-      line-height: 1.2;
-      color: #253854;
-      background-color: #86d7c1;
-      border: 0 solid #253854;
-      border-radius: 52px;
-      padding: 22px 34px;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      text-align: center;
-      transition: all 0.3s ease;
       align-self: center;
     }
     
-    .cta-button:hover {
-      background-color: #7bc9b5;
-      transform: translateY(-2px);
-      box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
-    }
-    
-    .cta-button:active {
-      transform: translateY(0);
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-    }
-    
-    /* Footer */
-    .footer {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-end;
-      width: 100%;
-      background-color: #253854;
-      padding: 56px 24px;
-    }
-    
-    .footer-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      width: 100%;
-      gap: 24px;
-    }
-    
-    .footer-main {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      gap: 24px;
-    }
-    
-    .footer-logo {
-      width: 200px;
-      height: auto;
-    }
-    
-    .footer-info {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      gap: 16px;
-    }
-    
-    .footer-title {
-      font-size: 18px;
-      font-family: 'Libre Franklin', Arial, sans-serif;
-      font-weight: 700;
-      line-height: 1.2;
-      color: #ffffff;
-    }
-    
-    .footer-contact-item {
-      display: flex;
-      gap: 8px;
-      justify-content: flex-start;
-      align-items: center;
-    }
-    
-    .footer-contact-icon {
-      width: 20px;
-      height: auto;
-      flex-shrink: 0;
-    }
-    
-    .footer-contact-text {
-      font-size: 16px;
-      font-family: Molengo, serif;
-      font-weight: 400;
-      line-height: 1.2;
-      color: #ffffff;
-    }
-    
-    .invisalign-logo {
-      width: 150px;
-      height: auto;
-      margin-top: 16px;
-    }
-    
-    .footer-disclaimer {
-      font-size: 12px;
-      font-family: 'Mukta Malar', Arial, sans-serif;
-      font-weight: 400;
-      line-height: 1.6;
-      text-align: center;
-      color: #ffffff;
-      margin-top: 16px;
-    }
-    
-    .footer-legal {
-      font-size: 12px;
-      font-family: Molengo, serif;
-      font-weight: 400;
-      line-height: 1.2;
-      color: #ffffff;
-      margin-top: 10px;
-      text-align: center;
-    }
-    
-    /* Responsive media queries */
+    /* Page-specific responsive styles */
     @media (min-width: 640px) {
-      .contact-info {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 16px;
-      }
-      
-      .contact-text {
-        font-size: 16px;
-      }
-      
-      .logo {
-        width: 280px;
-      }
-      
-      .nav-links {
-        flex-direction: row;
-        gap: 24px;
-      }
-      
-      .nav-link {
-        font-size: 20px;
-      }
-      
-      .main-title {
-        font-size: 42px;
-      }
-      
       .specialty-title {
         font-size: 28px;
       }
@@ -394,71 +100,11 @@
       .specialty-description {
         font-size: 18px;
       }
-      
-      .cta-button {
-        font-size: 28px;
-      }
-      
-      .footer-main {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-      }
-      
-      .footer-logo {
-        width: 280px;
-      }
-      
-      .invisalign-logo {
-        width: 200px;
-      }
     }
     
     @media (min-width: 768px) {
-      .header-top {
-        flex-direction: row;
-        justify-content: center;
-        padding: 12px 24px;
-      }
-      
-      .contact-info {
-        flex-direction: row;
-        gap: 32px;
-      }
-      
-      .contact-text {
-        font-size: 18px;
-      }
-      
-      .header-nav {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 16px 24px;
-      }
-      
-      .logo {
-        width: 350px;
-      }
-      
-      .hamburger {
-        display: none;
-      }
-      
-      .nav-menu {
-        display: block;
-      }
-      
-      .nav-links {
-        flex-direction: row;
-        gap: 32px;
-      }
-      
-      .nav-link {
-        font-size: 22px;
-      }
-      
-      .main-title {
-        font-size: 52px;
+      .content-section {
+        padding: 48px 32px;
       }
       
       .specialty-item {
@@ -483,147 +129,71 @@
         width: 38%;
         max-width: 400px;
       }
-      
-      .cta-button {
-        font-size: 32px;
-      }
-      
-      .footer {
-        padding: 56px 52px;
-      }
-      
-      .footer-title {
-        font-size: 20px;
-      }
-      
-      .footer-contact-text {
-        font-size: 18px;
-      }
     }
     
     @media (min-width: 1024px) {
-      .contact-text {
-        font-size: 20px;
-      }
-      
-      .logo {
-        width: 466px;
-      }
-      
-      .nav-link {
-        font-size: 24px;
-      }
-      
-      .content-section {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 32px;
-      }
-      
-      .main-title {
-        font-size: 64px;
-      }
-      
       .specialty-title {
         font-size: 40px;
       }
       
       .specialty-description {
         font-size: 24px;
-      }
-      
-      .cta-button {
-        font-size: 36px;
-      }
-      
-      .footer-main {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-      
-      .footer-logo {
-        width: 400px;
-      }
-      
-      .footer-title {
-        font-size: 24px;
-      }
-      
-      .footer-contact-text {
-        font-size: 20px;
-      }
-      
-      .invisalign-logo {
-        width: 250px;
       }
     }
     
     @media (min-width: 1280px) {
-      .contact-text {
-        font-size: 22px;
-      }
-      
-      .nav-link {
-        font-size: 26px;
-      }
-      
-      .main-title {
-        font-size: 64px;
-      }
-      
       .specialty-title {
         font-size: 40px;
       }
       
       .specialty-description {
         font-size: 26px;
-      }
-      
-      .cta-button {
-        font-size: 40px;
       }
     }
   </style>
 <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fmiguelsa9614back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
 </head>
 <body>
-  <main class="main-container">
-    <header class="header">
-      <div class="header-top">
-        <div class="contact-info">
-          <div class="contact-item">
-            <img src="../assets/images/img_vector.png" alt="Teléfono" class="contact-icon" />
-            <span class="contact-text">(+591) 62547130 / (2) 2799061</span>
+  <div class="main-container">
+    <!-- Header -->
+    <header class="top-header">
+      <div class="content-wrapper">
+        <div class="header-content">
+          <div class="header-item">
+            <img src="../assets/images/img_vector.png" alt="Phone" class="header-icon" />
+            <span>(+591) 62547130 / (2) 2799061</span>
           </div>
-          <div class="contact-item">
-            <img src="../assets/images/img_envelope_1.svg" alt="Email" class="contact-icon" />
-            <span class="contact-text">lizzie_cardenas@yahoo.es</span>
+          <div class="header-item">
+            <img src="../assets/images/img_envelope_1.svg" alt="Email" class="header-icon" />
+            <span>lizzie_cardenas@yahoo.es</span>
           </div>
-          <div class="contact-item">
-            <img src="../assets/images/img_vector_white_a700.svg" alt="Ubicación" class="contact-icon" />
-            <span class="contact-text">Calacoto calle 21 #8226 piso 2 oficina 7</span>
+          <div class="header-item">
+            <img src="../assets/images/img_vector_white_a700.svg" alt="Location" class="header-icon" />
+            <span>Calacoto calle 21 #8226 piso 2 oficina 7</span>
           </div>
         </div>
       </div>
-      
-      <nav class="header-nav">
-        <img src="../assets/images/img_logo_lizzie_cardenas_versi_n2.png" alt="Logo Dra. Lizzie Cardenas" class="logo" />
-        
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
-        
-        <div class="nav-menu">
+    </header>
+    
+    <!-- Navigation -->
+    <nav class="navigation">
+      <div class="content-wrapper">
+        <div class="nav-content">
+          <div class="logo-section">
+            <img src="../assets/images/img_logo_lizzie_cardenas_versi_n2.png" alt="Dra. Lizzie Cardenas Logo" class="logo" />
+          </div>
           <div class="nav-links">
-            <a href="#inicio" class="nav-link" role="menuitem">INICIO</a>
-            <a href="#sobre-mi" class="nav-link" role="menuitem">SOBRE MÍ</a>
-            <a href="#especialidades" class="nav-link" role="menuitem">ESPECIALIDADES</a>
-            <a href="#contacto" class="nav-link" role="menuitem">CONTACTO</a>
+            <a href="#" class="nav-link">INICIO</a>
+            <a href="#" class="nav-link">SOBRE MÍ</a>
+            <a href="#" class="nav-link">ESPECIALIDADES</a>
+            <a href="#" class="nav-link">CONTACTO</a>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
 
-    <section class="content-section" id="especialidades">
-      <div class="specialties-header">
+    <main class="content-section" id="especialidades">
+      <div class="content-wrapper">
         <h1 class="main-title">Especialidades</h1>
         
         <div class="specialties-list">
@@ -680,46 +250,44 @@
       </div>
 
       <a href="#contacto" class="cta-button">Solicita tu cita</a>
-    </section>
+    </main>
 
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-main">
-          <img src="../assets/images/img_logo_lizzie_car.png" alt="Logo Dra. Lizzie Cardenas" class="footer-logo" />
+    <!-- Footer -->
+    <footer class="footer" style="width:100%;padding-left:0;padding-right:0;">
+      <div class="content-wrapper">
+        <div class="footer-content">
+          <img src="../assets/images/img_logo_lizzie_car.png" alt="Dra. Lizzie Cárdenas Logo" class="footer-logo" />
           
           <div class="footer-info">
             <h3 class="footer-title">Información de contacto:</h3>
-            
-            <div class="footer-contact-item">
-              <img src="../assets/images/img_phone_icon_footer.svg" alt="Teléfono" class="footer-contact-icon" />
-              <span class="footer-contact-text">(+591) 62547130 / (2) 2799061</span>
-            </div>
-            
-            <div class="footer-contact-item">
-              <img src="../assets/images/img_vector_white_a700.svg" alt="Ubicación" class="footer-contact-icon" />
-              <span class="footer-contact-text">Calacoto calle 21 #8226 piso 2 oficina 7</span>
-            </div>
-            
-            <div class="footer-contact-item">
-              <img src="../assets/images/img_envelope_1.svg" alt="Email" class="footer-contact-icon" />
-              <span class="footer-contact-text">lizzie_cardenas@yahoo.es</span>
+            <div class="footer-contact">
+              <div class="footer-contact-item">
+                <img src="../assets/images/img_phone_icon_footer.svg" alt="Phone" class="footer-icon" />
+                <span>(+591) 62547130 / (2) 2799061</span>
+              </div>
+              <div class="footer-contact-item">
+                <img src="../assets/images/img_vector_white_a700.svg" alt="Location" class="footer-icon" />
+                <span>Calacoto calle 21 #8226 piso 2 oficina 7</span>
+              </div>
+              <div class="footer-contact-item">
+                <img src="../assets/images/img_envelope_1.svg" alt="Email" class="footer-icon" />
+                <span> lizzie_cardenas@yahoo.es</span>
+              </div>
             </div>
           </div>
           
-          <img src="../assets/images/img_invisalignprovi.png" alt="Invisalign Provider" class="invisalign-logo" />
+          <img src="../assets/images/img_invisalignprovi.png" alt="Invisalign Provider" class="footer-brand" />
         </div>
         
-        <p class="footer-disclaimer">
-          Damon® is a registered trademark of Ormco Corporation.
-        </p>
-        
-        <p class="footer-legal">
-          Invisalign, the Invisalign logo, and iTero, among others, are trademarks and/or service marks of Align Technology, Inc. or its affiliates, and may be registered in the U.S. and/or other countries.
-        </p>
+        <div class="footer-disclaimer">
+          <p>Damon® is a registered trademark of Ormco Corporation.</p>
+          <p>Invisalign, the Invisalign logo, and iTero, among others, are trademarks and/or service marks of Align Technology, Inc. or its affiliates, and may be registered in the U.S. and/or other countries.</p>
+        </div>
       </div>
     </footer>
-  </main>
+  </div>
 
+  <!-- Sticky Navigation Script -->
   <script>
     function toggleMenu() {
       const navMenu = document.querySelector('.nav-menu');
