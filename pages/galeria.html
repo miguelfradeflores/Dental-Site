@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Shared styles for header, footer, and common components -->
+  <link rel="stylesheet" href="../assets/css/shared-styles.css">
+
+  <title>Galería | Dra. Lizzie Cárdenas | Consultorio Dental</title>
+  <meta name="description" content="Galería de fotos del consultorio dental de la Dra. Lizzie Cárdenas. Conoce nuestras instalaciones y casos de éxito en ortodoncia e Invisalign." />
+  <meta name="keywords" content="galería dental, consultorio La Paz, ortodoncia fotos, Invisalign resultados, Dra Lizzie Cárdenas" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Galería | Dra. Lizzie Cárdenas" />
+  <meta property="og:description" content="Galería de fotos del consultorio dental y casos de éxito en ortodoncia." />
+  
+  <style>
+    /* Page-specific styles for Galería */
+    .gallery-section {
+      padding: 32px 16px;
+    }
+    
+    .gallery-intro {
+      font-size: 18px;
+      font-family: 'Nunito Sans', sans-serif;
+      color: #000000;
+      text-align: center;
+      margin-bottom: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      width: 100%;
+    }
+    
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+    
+    .gallery-item-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(37, 56, 84, 0.9));
+      color: #ffffff;
+      padding: 16px;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 14px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-item:hover .gallery-item-caption {
+      transform: translateY(0);
+    }
+    
+    .gallery-placeholder {
+      background-color: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 250px;
+      color: #666;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 16px;
+    }
+    
+    /* Responsive styles */
+    @media (min-width: 640px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+      
+      .gallery-intro {
+        font-size: 20px;
+      }
+      
+      .gallery-item img,
+      .gallery-placeholder {
+        height: 280px;
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .gallery-section {
+        padding: 48px 32px;
+      }
+      
+      .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      
+      .gallery-intro {
+        font-size: 22px;
+      }
+      
+      .gallery-item img,
+      .gallery-placeholder {
+        height: 300px;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .gallery-grid {
+        gap: 32px;
+      }
+      
+      .gallery-intro {
+        font-size: 24px;
+      }
+      
+      .gallery-item img,
+      .gallery-placeholder {
+        height: 320px;
+      }
+      
+      .gallery-item-caption {
+        font-size: 16px;
+      }
+    }
+    
+    @media (min-width: 1280px) {
+      .gallery-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      
+      .gallery-item img,
+      .gallery-placeholder {
+        height: 350px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <!-- Header -->
+    <header class="top-header">
+      <div class="content-wrapper">
+        <div class="header-content">
+          <div class="header-item">
+            <a href="https://wa.me/59162547130" target="_blank" class="header-link">
+              <img src="../assets/images/img_vector.png" alt="Phone" class="header-icon" />
+              <span>(+591) 62547130 / (2) 2799061</span>
+            </a>
+          </div>
+          <div class="header-item">
+            <img src="../assets/images/img_envelope_1.svg" alt="Email" class="header-icon" />
+            <span>lizzie_cardenas@yahoo.es</span>
+          </div>
+          <div class="header-item">
+            <img src="../assets/images/img_vector_white_a700.svg" alt="Location" class="header-icon" />
+            <span>Calacoto calle 21 #8226 piso 2 oficina 7</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav class="navigation">
+      <div class="content-wrapper">
+        <div class="nav-content">
+          <div class="logo-section">
+            <img src="../assets/images/img_logo_lizzie_cardenas_versi_n2.png" alt="Dra. Lizzie Cardenas Logo" class="logo" />
+          </div>
+          <div class="nav-links">
+            <a href="home.html" class="nav-link">INICIO</a>
+            <a href="about_me.html" class="nav-link">SOBRE MÍ</a>
+            <a href="especialidades.html" class="nav-link">ESPECIALIDADES</a>
+            <a href="galeria.html" class="nav-link">GALERÍA</a>
+            <a href="contact.html" class="nav-link">CONTACTO</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="gallery-section">
+      <div class="content-wrapper">
+        <h1 class="main-title">Galería</h1>
+        
+        <p class="gallery-intro">
+          Conoce nuestro consultorio y algunos de nuestros casos de éxito. Cada sonrisa es única y trabajamos para lograr los mejores resultados.
+        </p>
+        
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="../assets/images/img_consultorio.png" alt="Consultorio dental" />
+            <div class="gallery-item-caption">Nuestro consultorio</div>
+          </div>
+          
+          <div class="gallery-item">
+            <img src="../assets/images/img_doctora.png" alt="Dra. Lizzie Cárdenas" />
+            <div class="gallery-item-caption">Dra. Lizzie Cárdenas</div>
+          </div>
+          
+          <div class="gallery-item">
+            <img src="../assets/images/img_dentista.png" alt="Atención profesional" />
+            <div class="gallery-item-caption">Atención profesional</div>
+          </div>
+          
+          <div class="gallery-item">
+            <img src="../assets/images/img_121023_invisalign.png" alt="Tratamiento Invisalign" />
+            <div class="gallery-item-caption">Tratamiento Invisalign®</div>
+          </div>
+          
+          <div class="gallery-item">
+            <img src="../assets/images/img_pexels_ggrudic_19328507.png" alt="Ortodoncia fija" />
+            <div class="gallery-item-caption">Ortodoncia correctiva fija</div>
+          </div>
+          
+          <div class="gallery-item">
+            <img src="../assets/images/img_vlcsnap_2025_08.png" alt="Odontopediatría" />
+            <div class="gallery-item-caption">Odontopediatría</div>
+          </div>
+          
+          <div class="gallery-item">
+            <img src="../assets/images/img_pexels_karolina.png" alt="Odontología integral" />
+            <div class="gallery-item-caption">Odontología integral</div>
+          </div>
+          
+          <div class="gallery-item">
+            <img src="../assets/images/img_image_1.png" alt="Ortopedia funcional" />
+            <div class="gallery-item-caption">Ortopedia funcional</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" style="width:100%;padding-left:0;padding-right:0;">
+      <div class="content-wrapper">
+        <div class="footer-content">
+          <img src="../assets/images/img_logo_lizzie_car.png" alt="Dra. Lizzie Cárdenas Logo" class="footer-logo" />
+          
+          <div class="footer-info">
+            <h3 class="footer-title">Información de contacto:</h3>
+            <div class="footer-contact">
+              <div class="footer-contact-item">
+                <img src="../assets/images/img_phone_icon_footer.svg" alt="Phone" class="footer-icon" />
+                <span>(+591) 62547130 / (2) 2799061</span>
+              </div>
+              <div class="footer-contact-item">
+                <img src="../assets/images/img_vector_white_a700.svg" alt="Location" class="footer-icon" />
+                <span>Calacoto calle 21 #8226 piso 2 oficina 7</span>
+              </div>
+              <div class="footer-contact-item">
+                <img src="../assets/images/img_envelope_1.svg" alt="Email" class="footer-icon" />
+                <span>lizzie_cardenas@yahoo.es</span>
+              </div>
+            </div>
+          </div>
+          
+          <img src="../assets/images/img_invisalignprovi.png" alt="Invisalign Provider" class="footer-brand" />
+        </div>
+        
+        <div class="footer-disclaimer">
+          <p>Damon® is a registered trademark of Ormco Corporation.</p>
+          <p>Invisalign, the Invisalign logo, and iTero, among others, are trademarks and/or service marks of Align Technology, Inc. or its affiliates, and may be registered in the U.S. and/or other countries.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // make the navigation a sticky header
+    window.addEventListener('scroll', function() {
+      const nav = document.querySelector('.navigation');
+      if (window.scrollY > 0) {
+        nav.classList.add('sticky');
+      } else {
+        nav.classList.remove('sticky');
+      }
+    });
+  </script>
+</body>
+</html>
