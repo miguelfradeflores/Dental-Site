@@ -677,7 +677,7 @@
                     <input type="hidden" name="_subject" value="Nuevo mensaje desde el sitio web - Dra. Lizzie Cárdenas">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_next" value="https://www.lizziecardenas.com.bo/pages/thanks.html">
+                    <input type="hidden" name="_next" value="https://lizziecardenas.com.bo/pages/thanks.html">
                     
                     <div class="form-row">
                         <input type="text" name="nombre" class="form-input" placeholder="Nombre" required />
@@ -745,42 +745,14 @@
         const submitBtn = document.getElementById('submit-btn');
         const formStatus = document.getElementById('form-status');
 
-        contactForm.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
+        contactForm.addEventListener('submit', function(e) {
             // Show loading state
             submitBtn.disabled = true;
             submitBtn.textContent = 'Enviando...';
             formStatus.style.display = 'none';
             
-            const formData = new FormData(contactForm);
-            
-            try {
-                const response = await fetch(contactForm.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-                
-                if (response.ok) {
-                    // Redirect to thanks page on success
-                    window.location.href = 'thanks.html';
-                } else {
-                    throw new Error('Error en el servidor');
-                }
-            } catch (error) {
-                // Show error message
-                formStatus.style.display = 'block';
-                formStatus.style.backgroundColor = '#ffebee';
-                formStatus.style.color = '#c62828';
-                formStatus.textContent = 'Hubo un error al enviar el mensaje. Por favor, intenta de nuevo o contáctanos por WhatsApp.';
-                
-                // Reset button
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Enviar mensaje';
-            }
+            // Allow the form to submit normally (no CORS issues)
+            // FormSubmit.co will handle the redirect using the _next field
         });
     </script>
 </body>
