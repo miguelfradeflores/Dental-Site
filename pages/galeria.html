@@ -371,7 +371,12 @@
           <div class="logo-section">
             <img src="../assets/images/img_logo_lizzie_cardenas_versi_n2.png" alt="Dra. Lizzie Cardenas Logo" class="logo" />
           </div>
-          <div class="nav-links">
+          <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="nav-links" id="nav-links">
             <a href="home.html" class="nav-link">INICIO</a>
             <a href="about_me.html" class="nav-link">SOBRE MÍ</a>
             <a href="especialidades.html" class="nav-link">ESPECIALIDADES</a>
@@ -498,15 +503,22 @@
     });
 
     // =============================================
-    // Sticky navigation
+    // Mobile navigation toggle
     // =============================================
-    window.addEventListener('scroll', function() {
-      const nav = document.querySelector('.navigation');
-      if (window.scrollY > 0) {
-        nav.classList.add('sticky');
-      } else {
-        nav.classList.remove('sticky');
-      }
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    navToggle.addEventListener('click', function() {
+      navToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    navLinks.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
     });
 
     // =============================================
