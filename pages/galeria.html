@@ -54,11 +54,43 @@
       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     }
     
-    .gallery-item img {
+    .gallery-item img,
+    .gallery-item video {
       width: 100%;
       height: 250px;
       object-fit: cover;
       display: block;
+    }
+    
+    .gallery-item .play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      background: rgba(37, 56, 84, 0.8);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    
+    .gallery-item .play-icon::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 20px solid #ffffff;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      margin-left: 5px;
+    }
+    
+    .gallery-item:hover .play-icon {
+      background: #86d7c1;
+      transform: translate(-50%, -50%) scale(1.1);
     }
     
     .gallery-item-caption {
@@ -102,6 +134,7 @@
       }
       
       .gallery-item img,
+      .gallery-item video,
       .gallery-placeholder {
         height: 280px;
       }
@@ -121,6 +154,7 @@
       }
       
       .gallery-item img,
+      .gallery-item video,
       .gallery-placeholder {
         height: 300px;
       }
@@ -136,6 +170,7 @@
       }
       
       .gallery-item img,
+      .gallery-item video,
       .gallery-placeholder {
         height: 320px;
       }
@@ -151,8 +186,156 @@
       }
       
       .gallery-item img,
+      .gallery-item video,
       .gallery-placeholder {
         height: 350px;
+      }
+    }
+    
+    /* Lightbox styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.95);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    
+    .lightbox.active {
+      display: flex;
+    }
+    
+    .lightbox-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .lightbox-image,
+    .lightbox-video {
+      max-width: 100%;
+      max-height: 70vh;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+    
+    .lightbox-video {
+      display: none;
+    }
+    
+    .lightbox-image.hidden,
+    .lightbox-video.hidden {
+      display: none;
+    }
+    
+    .lightbox-video:not(.hidden) {
+      display: block;
+    }
+    
+    .lightbox-caption {
+      color: #ffffff;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 18px;
+      text-align: center;
+      margin-top: 16px;
+      padding: 12px 24px;
+      background: rgba(37, 56, 84, 0.9);
+      border-radius: 8px;
+    }
+    
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      color: #ffffff;
+      font-size: 40px;
+      cursor: pointer;
+      z-index: 2001;
+      transition: transform 0.3s ease, color 0.3s ease;
+      line-height: 1;
+    }
+    
+    .lightbox-close:hover {
+      transform: scale(1.2);
+      color: #86d7c1;
+    }
+    
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(37, 56, 84, 0.8);
+      border: none;
+      color: #ffffff;
+      font-size: 32px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      z-index: 2001;
+    }
+    
+    .lightbox-nav:hover {
+      background-color: #86d7c1;
+      color: #253854;
+      transform: translateY(-50%) scale(1.1);
+    }
+    
+    .lightbox-prev {
+      left: 20px;
+    }
+    
+    .lightbox-next {
+      right: 20px;
+    }
+    
+    .lightbox-counter {
+      color: #ffffff;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 14px;
+      margin-top: 12px;
+      opacity: 0.8;
+    }
+    
+    @media (max-width: 768px) {
+      .lightbox-nav {
+        width: 45px;
+        height: 45px;
+        font-size: 24px;
+      }
+      
+      .lightbox-prev {
+        left: 10px;
+      }
+      
+      .lightbox-next {
+        right: 10px;
+      }
+      
+      .lightbox-caption {
+        font-size: 16px;
+        padding: 10px 16px;
+      }
+      
+      .lightbox-close {
+        top: 10px;
+        right: 10px;
+        font-size: 32px;
       }
     }
   </style>
@@ -171,7 +354,7 @@
           </div>
           <div class="header-item">
             <img src="../assets/images/img_envelope_1.svg" alt="Email" class="header-icon" />
-            <span>lizzie_cardenas@yahoo.es</span>
+            <span>contacto@lizziecardenas.com.bo</span>
           </div>
           <div class="header-item">
             <img src="../assets/images/img_vector_white_a700.svg" alt="Location" class="header-icon" />
@@ -207,49 +390,24 @@
           Conoce nuestro consultorio y algunos de nuestros casos de éxito. Cada sonrisa es única y trabajamos para lograr los mejores resultados.
         </p>
         
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <img src="../assets/images/img_consultorio.png" alt="Consultorio dental" />
-            <div class="gallery-item-caption">Nuestro consultorio</div>
-          </div>
-          
-          <div class="gallery-item">
-            <img src="../assets/images/img_doctora.png" alt="Dra. Lizzie Cárdenas" />
-            <div class="gallery-item-caption">Dra. Lizzie Cárdenas</div>
-          </div>
-          
-          <div class="gallery-item">
-            <img src="../assets/images/img_dentista.png" alt="Atención profesional" />
-            <div class="gallery-item-caption">Atención profesional</div>
-          </div>
-          
-          <div class="gallery-item">
-            <img src="../assets/images/img_121023_invisalign.png" alt="Tratamiento Invisalign" />
-            <div class="gallery-item-caption">Tratamiento Invisalign®</div>
-          </div>
-          
-          <div class="gallery-item">
-            <img src="../assets/images/img_pexels_ggrudic_19328507.png" alt="Ortodoncia fija" />
-            <div class="gallery-item-caption">Ortodoncia correctiva fija</div>
-          </div>
-          
-          <div class="gallery-item">
-            <img src="../assets/images/img_vlcsnap_2025_08.png" alt="Odontopediatría" />
-            <div class="gallery-item-caption">Odontopediatría</div>
-          </div>
-          
-          <div class="gallery-item">
-            <img src="../assets/images/img_pexels_karolina.png" alt="Odontología integral" />
-            <div class="gallery-item-caption">Odontología integral</div>
-          </div>
-          
-          <div class="gallery-item">
-            <img src="../assets/images/img_image_1.png" alt="Ortopedia funcional" />
-            <div class="gallery-item-caption">Ortopedia funcional</div>
-          </div>
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Gallery items are generated dynamically from JavaScript -->
         </div>
       </div>
     </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+      <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">&#10094;</button>
+      <div class="lightbox-content">
+        <img src="" alt="" class="lightbox-image" id="lightbox-image">
+        <video class="lightbox-video hidden" id="lightbox-video" controls></video>
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+        <div class="lightbox-counter" id="lightbox-counter"></div>
+      </div>
+      <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">&#10095;</button>
+    </div>
 
     <!-- Footer -->
     <footer class="footer" style="width:100%;padding-left:0;padding-right:0;">
@@ -270,7 +428,7 @@
               </div>
               <div class="footer-contact-item">
                 <img src="../assets/images/img_envelope_1.svg" alt="Email" class="footer-icon" />
-                <span>lizzie_cardenas@yahoo.es</span>
+                <span> contacto@lizziecardenas.com.bo</span>
               </div>
             </div>
           </div>
@@ -287,7 +445,61 @@
   </div>
 
   <script>
-    // make the navigation a sticky header
+    // =============================================
+    // GALLERY DATA - Edit this array to add/remove/modify images/videos
+    // For videos, add type: 'video' to the item
+    // =============================================
+    const galleryData = [
+      // { src: '../assets/images/img_doctora.png', alt: 'Dra. Lizzie Cárdenas', caption: 'Dra. Lizzie Cárdenas' },
+      { src: '../assets/images/galery/consultorio1.png', alt: 'Consultorio', caption: 'Consultorio'},
+      { src: '../assets/images/galery/consultorio2.png', alt: 'Consultorio', caption: 'Consultorio'},
+      { src: '../assets/images/galery/consultorio3.png', alt: 'Consultorio', caption: 'Consultorio'},
+      { src: '../assets/images/img_dentista.png', alt: 'Atención profesional', caption: 'Atención profesional' },
+      { src: '../assets/images/img_121023_invisalign.png', alt: 'Tratamiento Invisalign', caption: 'Tratamiento Invisalign®' },
+      { src: '../assets/images/video_invisalign_3d.mov', alt: 'Video Invisalign 3D', caption: 'Escaneo 3D Invisalign®', type: 'video' },
+      { src: '../assets/images/img_ortodoncia.jpg', alt: 'Ortodoncia fija', caption: 'Ortodoncia correctiva fija' },
+      { src: '../assets/images/img_image_1.png', alt: 'Ortopedia funcional', caption: 'Ortopedia funcional' },
+      { src: '../assets/images/galery/IMG_1.JPG', alt: 'Nuestros pacientes', caption: 'Nuestros pacientes' },
+      { src: '../assets/images/galery/IMG_3.jpg', alt: 'Ortodoncia correctiva fija', caption: 'Ortodoncia correctiva fija' },
+      { src: '../assets/images/galery/IMG_4.JPG', alt: 'Tratamiento Invisalign®', caption: 'Tratamiento Invisalign®' },
+      { src: '../assets/images/galery/IMG_5.JPG', alt: 'Tratamiento Invisalign®', caption: 'Tratamiento Invisalign®' },
+      { src: '../assets/images/galery/IMG_7.JPG', alt: 'Resultados del tratamiento de ortodoncia', caption: 'Resultados del tratamiento de ortodoncia' },
+      { src: '../assets/images/galery/IMG_9.JPG', alt: 'Tratamiento Invisalign®', caption: 'Tratamiento Invisalign®' },
+      { src: '../assets/images/galery/antesydespues.jpg', alt: 'Antes y después Invisalign®', caption: 'Antes y después Invisalign®' },
+      { src: '../assets/images/galery/img_consultorio_1.jpg', alt: 'Consultorio', caption: 'Laboratorio Esterilizacion' },
+      { src: '../assets/images/galery/img_consultorio_2.jpg', alt: 'Consultorio', caption: 'Laboratorio Esterilizacion' },
+      { src: '../assets/images/galery/img_tratamiento.jpeg', alt: 'Escaneado Invisalign®', caption: 'Escaneado Invisalign®' },
+    ];
+
+    // =============================================
+    // Generate gallery items from data
+    // =============================================
+    const galleryGrid = document.getElementById('gallery-grid');
+    
+    galleryData.forEach((item, index) => {
+      const galleryItem = document.createElement('div');
+      galleryItem.className = 'gallery-item';
+      
+      if (item.type === 'video') {
+        galleryItem.innerHTML = `
+          <video src="${item.src}" muted></video>
+          <div class="play-icon"></div>
+          <div class="gallery-item-caption">${item.caption}</div>
+        `;
+      } else {
+        galleryItem.innerHTML = `
+          <img src="${item.src}" alt="${item.alt}" />
+          <div class="gallery-item-caption">${item.caption}</div>
+        `;
+      }
+      
+      galleryItem.addEventListener('click', () => openLightbox(index));
+      galleryGrid.appendChild(galleryItem);
+    });
+
+    // =============================================
+    // Sticky navigation
+    // =============================================
     window.addEventListener('scroll', function() {
       const nav = document.querySelector('.navigation');
       if (window.scrollY > 0) {
@@ -295,6 +507,73 @@
       } else {
         nav.classList.remove('sticky');
       }
+    });
+
+    // =============================================
+    // Lightbox functionality
+    // =============================================
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxVideo = document.getElementById('lightbox-video');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxCounter = document.getElementById('lightbox-counter');
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      updateLightbox();
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+      // Pause video when closing
+      lightboxVideo.pause();
+      lightboxVideo.currentTime = 0;
+    }
+
+    function navigateLightbox(direction) {
+      // Pause current video if playing
+      lightboxVideo.pause();
+      lightboxVideo.currentTime = 0;
+      
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = galleryData.length - 1;
+      if (currentIndex >= galleryData.length) currentIndex = 0;
+      updateLightbox();
+    }
+
+    function updateLightbox() {
+      const item = galleryData[currentIndex];
+      
+      if (item.type === 'video') {
+        lightboxImage.classList.add('hidden');
+        lightboxVideo.classList.remove('hidden');
+        lightboxVideo.src = item.src;
+      } else {
+        lightboxVideo.classList.add('hidden');
+        lightboxImage.classList.remove('hidden');
+        lightboxImage.src = item.src;
+        lightboxImage.alt = item.alt;
+      }
+      
+      lightboxCaption.textContent = item.caption;
+      lightboxCounter.textContent = `${currentIndex + 1} / ${galleryData.length}`;
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navigateLightbox(-1);
+      if (e.key === 'ArrowRight') navigateLightbox(1);
+    });
+
+    // Close on background click
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
     });
   </script>
 </body>

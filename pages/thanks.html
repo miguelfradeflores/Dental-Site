@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Shared styles for header, footer, and common components -->
+    <link rel="stylesheet" href="../assets/css/shared-styles.css">
+    
+    <title>Gracias - Dra. Lizzie Cárdenas</title>
+    <style>
+        /* Page-specific styles for thanks page */
+        .thanks-section {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 16px;
+            text-align: center;
+        }
+        
+        .thanks-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .thanks-icon {
+            width: 100px;
+            height: 100px;
+            background-color: #86d7c1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 32px;
+        }
+        
+        .thanks-icon::after {
+            content: '✓';
+            font-size: 50px;
+            color: #253854;
+            font-weight: bold;
+        }
+        
+        .thanks-title {
+            font-size: 36px;
+            font-family: 'Libre Franklin', sans-serif;
+            font-weight: 700;
+            color: #253854;
+            margin-bottom: 16px;
+        }
+        
+        .thanks-message {
+            font-size: 18px;
+            font-family: 'Nunito Sans', sans-serif;
+            color: #000000;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+        
+        .back-button {
+            background-color: #86d7c1;
+            color: #253854;
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 52px;
+            cursor: pointer;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Responsive styles */
+        @media (min-width: 640px) {
+            .thanks-title {
+                font-size: 42px;
+            }
+            
+            .thanks-message {
+                font-size: 20px;
+            }
+            
+            .back-button {
+                font-size: 24px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .thanks-section {
+                padding: 80px 32px;
+            }
+            
+            .thanks-icon {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .thanks-icon::after {
+                font-size: 60px;
+            }
+            
+            .thanks-title {
+                font-size: 48px;
+            }
+            
+            .thanks-message {
+                font-size: 22px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .thanks-title {
+                font-size: 56px;
+            }
+            
+            .thanks-message {
+                font-size: 24px;
+            }
+            
+            .back-button {
+                font-size: 28px;
+                padding: 18px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Header -->
+        <header class="top-header">
+            <div class="content-wrapper">
+                <div class="header-content">
+                    <div class="header-item">
+                        <a href="https://wa.me/59162547130" target="_blank" class="header-link">
+                            <img src="../assets/images/img_vector.png" alt="Phone" class="header-icon" />
+                            <span>(+591) 62547130 / (2) 2799061</span>
+                        </a>
+                    </div>
+                    <div class="header-item">
+                        <img src="../assets/images/img_envelope_1.svg" alt="Email" class="header-icon" />
+                        <span>contacto@lizziecardenas.com.bo</span>
+                    </div>
+                    <div class="header-item">
+                        <img src="../assets/images/img_vector_white_a700.svg" alt="Location" class="header-icon" />
+                        <span>Calacoto calle 21 #8226 piso 2 oficina 7</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Navigation -->
+        <nav class="navigation">
+            <div class="content-wrapper">
+                <div class="nav-content">
+                    <div class="logo-section">
+                        <img src="../assets/images/img_logo_lizzie_cardenas_versi_n2.png" alt="Dra. Lizzie Cardenas Logo" class="logo" />
+                    </div>
+                    <div class="nav-links">
+                        <a href="home.html" class="nav-link">INICIO</a>
+                        <a href="about_me.html" class="nav-link">SOBRE MÍ</a>
+                        <a href="especialidades.html" class="nav-link">ESPECIALIDADES</a>
+                        <a href="galeria.html" class="nav-link">GALERÍA</a>
+                        <a href="contact.html" class="nav-link">CONTACTO</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Thanks Section -->
+        <main class="thanks-section">
+            <div class="thanks-container">
+                <div class="thanks-icon"></div>
+                <h1 class="thanks-title">¡Gracias por contactarnos!</h1>
+                <p class="thanks-message">
+                    Hemos recibido tu mensaje correctamente. Nos pondremos en contacto contigo lo antes posible.
+                </p>
+                <a href="home.html" class="back-button">Volver al inicio</a>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer" style="width:100%;padding-left:0;padding-right:0;">
+            <div class="content-wrapper">
+                <div class="footer-content">
+                    <img src="../assets/images/img_logo_lizzie_car.png" alt="Dra. Lizzie Cárdenas Logo" class="footer-logo" />
+                    
+                    <div class="footer-info">
+                        <h3 class="footer-title">Información de contacto:</h3>
+                        <div class="footer-contact">
+                            <div class="footer-contact-item">
+                                <img src="../assets/images/img_phone_icon_footer.svg" alt="Phone" class="footer-icon" />
+                                <span>(+591) 62547130 / (2) 2799061</span>
+                            </div>
+                            <div class="footer-contact-item">
+                                <img src="../assets/images/img_vector_white_a700.svg" alt="Location" class="footer-icon" />
+                                <span>Calacoto calle 21 #8226 piso 2 oficina 7</span>
+                            </div>
+                            <div class="footer-contact-item">
+                                <img src="../assets/images/img_envelope_1.svg" alt="Email" class="footer-icon" />
+                                <span>contacto@lizziecardenas.com.bo</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <img src="../assets/images/img_invisalignprovi.png" alt="Invisalign Provider" class="footer-brand" />
+                </div>
+                
+                <div class="footer-disclaimer">
+                    <p>Damon® is a registered trademark of Ormco Corporation.</p>
+                    <p>Invisalign, the Invisalign logo, and iTero, among others, are trademarks and/or service marks of Align Technology, Inc. or its affiliates, and may be registered in the U.S. and/or other countries.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        // make the navigation a sticky header
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('.navigation');
+            if (window.scrollY > 0) {
+                nav.classList.add('sticky');
+            } else {
+                nav.classList.remove('sticky');
+            }
+        });
+    </script>
+</body>
+</html>
